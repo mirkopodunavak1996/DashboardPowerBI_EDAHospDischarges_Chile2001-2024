@@ -1,0 +1,14 @@
+# Power BI Desktop cache & local settings (ignore entirely, wherever nested)
+**/.pbi/
+
+# Original pbix (kept locally, not needed with PBIP)
+*.pbix
+
+# Backup files
+*.pbix.bak
+~$*.pbip
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
