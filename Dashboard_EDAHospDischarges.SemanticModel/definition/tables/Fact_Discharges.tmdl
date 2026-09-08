@@ -1,0 +1,135 @@
+table Fact_Discharges
+	lineageTag: 0a621791-09be-4bb1-97ef-c4e19f68f8d4
+
+	measure 'Mortality Rate' =
+			
+			DIVIDE(
+			    CALCULATE(COUNTROWS('Fact_Discharges'), 'Fact_Discharges'[discharge condition] = "Deceased"),
+			    COUNTROWS('Fact_Discharges')
+			)
+		lineageTag: b1729c5a-5a16-4a14-a3c0-25645dcf5ee1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average LOS (capped)' = AVERAGE('Fact_Discharges'[LOS_capped])
+		lineageTag: 229cb908-d005-4d66-8819-ffcf7d5cf0b0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Median LOS Exact' =
+			
+			VAR FreqTable =
+			    ADDCOLUMNS(
+			        VALUES('Fact_Discharges'[LOS_capped]),
+			        "Freq", CALCULATE(COUNTROWS('Fact_Discharges'))
+			    )
+			VAR TotalCount = SUMX(FreqTable, [Freq])
+			VAR CumulativeTable =
+			    ADDCOLUMNS(
+			        FreqTable,
+			        "CumFreq",
+			            VAR CurrentVal = 'Fact_Discharges'[LOS_capped]
+			            RETURN SUMX(FILTER(FreqTable, 'Fact_Discharges'[LOS_capped] <= CurrentVal), [Freq])
+			    )
+			RETURN
+			    MINX(
+			        FILTER(CumulativeTable, [CumFreq] >= TotalCount / 2),
+			        'Fact_Discharges'[LOS_capped]
+			    )
+		formatString: 0
+		lineageTag: bbe7a404-7bc4-4abe-bae1-1ababd11edb6
+
+	column sex
+		dataType: string
+		lineageTag: 6864dc0b-1817-4b8d-9153-731cb6e365a4
+		summarizeBy: none
+		sourceColumn: sex
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: string
+		lineageTag: 42d186ed-ffb5-406f-8a12-fdee0b95abb3
+		summarizeBy: none
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'health insurance'
+		dataType: string
+		lineageTag: 6f653b91-87ec-4c37-a6f0-226f7cd98539
+		summarizeBy: none
+		sourceColumn: health insurance
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'healthcare facility name'
+		dataType: string
+		lineageTag: 2b7e8ee0-782d-41db-bb7d-5ceb0a1b54e5
+		summarizeBy: none
+		sourceColumn: healthcare facility name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'length of stay'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6226781a-746d-4beb-9b56-6cbe09a7a7a3
+		summarizeBy: sum
+		sourceColumn: length of stay
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'discharge condition'
+		dataType: string
+		lineageTag: 93b56e80-3da9-49c6-85c0-e125401cc792
+		summarizeBy: none
+		sourceColumn: discharge condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'primary diagnosis code'
+		dataType: string
+		lineageTag: d6c12b6e-e157-4857-8425-53ecf42cacbb
+		summarizeBy: none
+		sourceColumn: primary diagnosis code
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 773ec7d2-894c-40d9-9804-d68889fcf7d5
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOS_capped
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e04b034-3538-4209-b13e-f984da19810b
+		summarizeBy: sum
+		sourceColumn: LOS_capped
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Discharges = m
+		mode: import
+		source =
+				let
+				    Source = #"Discharges_2001-2024_bivariate_final",
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"primary diagnosis name", "chapter codes", "chapter names", "group codes", "group names"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Removed Columns",{{"primary diagnosis code", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"primary diagnosis code", Text.Clean, type text}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Cleaned Text",{"healthcare facility type"}),
+				    #"Trimmed Text1" = Table.TransformColumns(#"Removed Columns1",{{"healthcare facility name", Text.Trim, type text}}),
+				    #"Cleaned Text1" = Table.TransformColumns(#"Trimmed Text1",{{"healthcare facility name", Text.Clean, type text}}),
+				    #"Uppercased Text" = Table.TransformColumns(#"Cleaned Text1",{{"primary diagnosis code", Text.Upper, type text}})
+				in
+				    #"Uppercased Text"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

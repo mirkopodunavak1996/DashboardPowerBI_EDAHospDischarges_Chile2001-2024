@@ -1,0 +1,8 @@
+relationship AutoDetected_7d9a3680-ff4d-4344-aed6-c2655e6812b3
+	fromColumn: Fact_Discharges.'healthcare facility name'
+	toColumn: Hospital.'healthcare facility name'
+
+relationship 9f859d10-95de-7ea9-47c7-c473ee4c30d6
+	fromColumn: Fact_Discharges.'primary diagnosis code'
+	toColumn: Diagnosis.'primary diagnosis code'
+

@@ -1,0 +1,68 @@
+table Diagnosis
+	lineageTag: 27ec9941-72e0-4e67-8dfb-7936eb4f7e23
+
+	column 'primary diagnosis code'
+		dataType: string
+		lineageTag: 7f07456f-07ff-4b26-b197-1c72f5dd14f3
+		summarizeBy: none
+		sourceColumn: primary diagnosis code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'primary diagnosis name'
+		dataType: string
+		lineageTag: 6bfd39b2-edb9-4856-8d79-5a7fb947efc6
+		summarizeBy: none
+		sourceColumn: primary diagnosis name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'chapter codes'
+		dataType: string
+		lineageTag: 4986c7a8-89de-4078-963c-2bb08b8544f3
+		summarizeBy: none
+		sourceColumn: chapter codes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'chapter names'
+		dataType: string
+		lineageTag: e19eaa6b-1e65-4220-a1fc-17b22d70d740
+		summarizeBy: none
+		sourceColumn: chapter names
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'group codes'
+		dataType: string
+		lineageTag: 604c1c02-42f6-49f5-b676-5653608c6df3
+		summarizeBy: none
+		sourceColumn: group codes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'group names'
+		dataType: string
+		lineageTag: 146a5981-d2a9-4d7d-9f21-7e886463f1a2
+		summarizeBy: none
+		sourceColumn: group names
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Diagnosis = m
+		mode: import
+		source =
+				let
+				    Source = #"Discharges_2001-2024_bivariate_final",
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"primary diagnosis code", "primary diagnosis name", "chapter codes", "chapter names", "group codes", "group names"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Removed Other Columns",{{"primary diagnosis code", Text.Trim, type text}, {"primary diagnosis name", Text.Trim, type text}, {"chapter codes", Text.Trim, type text}, {"chapter names", Text.Trim, type text}, {"group codes", Text.Trim, type text}, {"group names", Text.Trim, type text}}),
+				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"primary diagnosis code", Text.Clean, type text}, {"primary diagnosis name", Text.Clean, type text}, {"chapter codes", Text.Clean, type text}, {"chapter names", Text.Clean, type text}, {"group codes", Text.Clean, type text}, {"group names", Text.Clean, type text}}),
+				    #"Uppercased Text" = Table.TransformColumns(#"Cleaned Text",{{"primary diagnosis code", Text.Upper, type text}}),
+				    #"Removed Duplicates" = Table.Distinct(#"Uppercased Text", {"primary diagnosis code"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

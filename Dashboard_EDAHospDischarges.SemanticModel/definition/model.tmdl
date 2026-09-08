@@ -9,11 +9,13 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Discharges_2001-2024_bivariate_final"]
+annotation PBI_QueryOrder = ["Discharges_2001-2024_bivariate_final","Diagnosis","Hospital","Fact_Discharges"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table Discharges_2001-2024_bivariate_final
+ref table Diagnosis
+ref table Hospital
+ref table Fact_Discharges
 
 ref cultureInfo en-US
 

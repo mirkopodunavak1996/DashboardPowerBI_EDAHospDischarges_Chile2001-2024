@@ -1,0 +1,11 @@
+expression Discharges_2001-2024_bivariate_final =
+		let
+		    Source = Parquet.Document(File.Contents("C:\Users\mpodu\Desktop\Curso Data Science DL\EDAHospDischarges_Chile2001-2024\data\processed\Discharges_2001-2024_bivariate_final.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+		in
+		    Source
+	lineageTag: 6ce7e589-4131-41ec-9209-2c07f9b04eaf
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
