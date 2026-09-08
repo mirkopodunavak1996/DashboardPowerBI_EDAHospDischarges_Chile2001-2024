@@ -15,11 +15,6 @@ table Discharges_2001-2024_bivariate_final
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Median LOS (capped) v2' = PERCENTILE.INC('Discharges_2001-2024_bivariate_final'[LOS_capped], 0.5)
-		lineageTag: 1f34e15a-ed21-4a45-8e03-c745dc62e44e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column sex
 		dataType: string
 		lineageTag: 78613157-0309-4e85-a079-099b9ebc7076
@@ -62,11 +57,28 @@ table Discharges_2001-2024_bivariate_final
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'length of stay'
+		dataType: int64
+		formatString: 0
+		lineageTag: 76c4c11f-98fe-434b-8480-648410d6c5d0
+		summarizeBy: sum
+		sourceColumn: length of stay
+
+		annotation SummarizationSetBy = Automatic
+
 	column 'discharge condition'
 		dataType: string
 		lineageTag: 7a0f7247-0cb2-48d4-bfae-7147e86dd2bc
 		summarizeBy: none
 		sourceColumn: discharge condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'primary diagnosis code'
+		dataType: string
+		lineageTag: 7548e1bd-cf90-4581-a04b-178b17c342d2
+		summarizeBy: none
+		sourceColumn: primary diagnosis code
 
 		annotation SummarizationSetBy = Automatic
 
@@ -87,6 +99,14 @@ table Discharges_2001-2024_bivariate_final
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'chapter codes'
+		dataType: string
+		lineageTag: e59057a1-f7bd-4993-81e9-0bfd00f137f6
+		summarizeBy: none
+		sourceColumn: chapter codes
+
+		annotation SummarizationSetBy = Automatic
+
 	column 'chapter names'
 		dataType: string
 		lineageTag: 0881e8cf-ef02-45f2-ba1c-7c90a4f27796
@@ -104,6 +124,14 @@ table Discharges_2001-2024_bivariate_final
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'group codes'
+		dataType: string
+		lineageTag: 57427f7f-65d7-4a09-8019-8591dab33608
+		summarizeBy: none
+		sourceColumn: group codes
+
+		annotation SummarizationSetBy = Automatic
+
 	column 'group names'
 		dataType: string
 		lineageTag: 46782c87-4ab1-46ef-bb20-81daea934f80
@@ -117,10 +145,9 @@ table Discharges_2001-2024_bivariate_final
 		source =
 				let
 				    Source = Parquet.Document(File.Contents("C:\Users\mpodu\Desktop\Curso Data Science DL\EDAHospDischarges_Chile2001-2024\data\processed\Discharges_2001-2024_bivariate_final.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
-				    #"Filtered Rows" = Table.SelectRows(Source, each true),
-				    #"Removed Columns" = Table.RemoveColumns(#"Filtered Rows",{"length of stay", "primary diagnosis code", "chapter codes", "group codes"})
+				    #"Filtered Rows" = Table.SelectRows(Source, each true)
 				in
-				    #"Removed Columns"
+				    #"Filtered Rows"
 
 	annotation PBI_ResultType = Table
 
