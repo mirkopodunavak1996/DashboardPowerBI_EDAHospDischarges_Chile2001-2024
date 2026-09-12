@@ -39,6 +39,19 @@ table Fact_Discharges
 		formatString: 0
 		lineageTag: bbe7a404-7bc4-4abe-bae1-1ababd11edb6
 
+	measure 'Diagnosis Prevalence %' =
+			
+			DIVIDE(
+			    COUNTROWS('Fact_Discharges'),
+			    CALCULATE(
+			        COUNTROWS('Fact_Discharges'),
+			        ALL('Diagnosis')
+			    )
+			)
+		lineageTag: 752f8660-edac-48c0-a203-bb53cba15e68
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column sex
 		dataType: string
 		lineageTag: 6864dc0b-1817-4b8d-9153-731cb6e365a4

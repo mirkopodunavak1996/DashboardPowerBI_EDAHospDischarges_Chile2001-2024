@@ -49,6 +49,21 @@ table Diagnosis
 
 		annotation SummarizationSetBy = Automatic
 
+	hierarchy 'Diagnosis Hierarchy'
+		lineageTag: cb02cd66-ee02-478a-9c01-6f1c37d809ea
+
+		level 'chapter names'
+			lineageTag: 674eab00-2701-4fc7-a43a-d3e72327719e
+			column: 'chapter names'
+
+		level 'group names'
+			lineageTag: 0374e1f3-005c-4464-a2b6-678234be3496
+			column: 'group names'
+
+		level 'primary diagnosis name'
+			lineageTag: cc26cc78-0570-40c0-a354-2745f50b461e
+			column: 'primary diagnosis name'
+
 	partition Diagnosis = m
 		mode: import
 		source =

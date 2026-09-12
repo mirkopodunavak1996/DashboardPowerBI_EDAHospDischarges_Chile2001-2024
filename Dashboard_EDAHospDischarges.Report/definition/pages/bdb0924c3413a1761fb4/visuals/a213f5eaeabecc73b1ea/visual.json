@@ -1,0 +1,297 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "a213f5eaeabecc73b1ea",
+  "position": {
+    "x": 507.7203973265884,
+    "y": 80.96082011423978,
+    "z": 1000,
+    "height": 185.24933415970119,
+    "width": 576.33126183018146,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Diagnosis"
+                        }
+                      },
+                      "Hierarchy": "Diagnosis Hierarchy"
+                    }
+                  },
+                  "Level": "chapter names"
+                }
+              },
+              "queryRef": "Diagnosis.Diagnosis Hierarchy.chapter names",
+              "nativeQueryRef": "Diagnosis Hierarchy chapter names",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Diagnosis"
+                        }
+                      },
+                      "Hierarchy": "Diagnosis Hierarchy"
+                    }
+                  },
+                  "Level": "group names"
+                }
+              },
+              "queryRef": "Diagnosis.Diagnosis Hierarchy.group names",
+              "nativeQueryRef": "Diagnosis Hierarchy group names",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Diagnosis"
+                        }
+                      },
+                      "Hierarchy": "Diagnosis Hierarchy"
+                    }
+                  },
+                  "Level": "primary diagnosis name"
+                }
+              },
+              "queryRef": "Diagnosis.Diagnosis Hierarchy.primary diagnosis name",
+              "nativeQueryRef": "Diagnosis Hierarchy primary diagnosis name",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Diagnosis.Diagnosis Hierarchy.chapter names"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Diagnosis"
+                    }
+                  },
+                  "Property": "chapter names"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Diagnosis.Diagnosis Hierarchy.group names"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Diagnosis"
+                    }
+                  },
+                  "Property": "group names"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Diagnosis.Diagnosis Hierarchy.primary diagnosis name"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'enfermedades de la piel y del tejido subcutáneo'"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'trastornos flictenulares'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'ciertas enfermedades infecciosas y parasitarias'"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'hepatitis viral'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'anemias nutricionales'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'tumores [neoplasias]'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f508d1ac80acea334b0c",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "chapter names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "222937c0b57301333681",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "group names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dcbfdf90635d73480370",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "primary diagnosis name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

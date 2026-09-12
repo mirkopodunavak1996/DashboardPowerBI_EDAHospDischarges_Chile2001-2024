@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 598,
-            "y": 24
+            "x": 616,
+            "y": 0
           },
           "nodeIndex": "Diagnosis",
           "nodeLineageTag": "27ec9941-72e0-4e67-8dfb-7936eb4f7e23",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 334,
-            "y": -50
+            "x": 307,
+            "y": 0
           },
           "nodeIndex": "Fact_Discharges",
           "nodeLineageTag": "0a621791-09be-4bb1-97ef-c4e19f68f8d4",
@@ -36,8 +36,8 @@
         },
         {
           "location": {
-            "x": 50,
-            "y": 34
+            "x": 0,
+            "y": 33
           },
           "nodeIndex": "Hospital",
           "nodeLineageTag": "3f068ffd-0026-4795-8c71-0d17f860edb7",
