@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c202f6812907a9d09c4c",
   "position": {
-    "x": 507.7203973265884,
-    "y": 284.04897904487513,
+    "x": 0,
+    "y": 115.26625236603628,
     "z": 4000,
     "height": 151,
     "width": 354,
@@ -50,7 +50,22 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },

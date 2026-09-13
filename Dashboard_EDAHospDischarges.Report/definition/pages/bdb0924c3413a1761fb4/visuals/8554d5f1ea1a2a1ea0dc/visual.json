@@ -23,11 +23,11 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Median LOS Exact"
+                  "Property": "Median"
                 }
               },
               "queryRef": "Fact_Discharges.Median LOS Exact",
-              "nativeQueryRef": "Median LOS Exact"
+              "nativeQueryRef": "Median"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Median LOS Exact"
+                "Property": "Median"
               }
             },
             "direction": "Descending"
@@ -93,7 +93,7 @@
                 "Entity": "Fact_Discharges"
               }
             },
-            "Property": "Median LOS Exact"
+            "Property": "Median"
           }
         },
         "type": "Advanced"

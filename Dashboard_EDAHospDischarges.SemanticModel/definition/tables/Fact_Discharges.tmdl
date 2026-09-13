@@ -16,7 +16,7 @@ table Fact_Discharges
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Median LOS Exact' =
+	measure Median =
 			
 			VAR FreqTable =
 			    ADDCOLUMNS(
@@ -48,9 +48,84 @@ table Fact_Discharges
 			        ALL('Diagnosis')
 			    )
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 752f8660-edac-48c0-a203-bb53cba15e68
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure P25 =
+			
+			VAR FreqTable =
+			    ADDCOLUMNS(
+			        VALUES('Fact_Discharges'[LOS_capped]),
+			        "Freq", CALCULATE(COUNTROWS('Fact_Discharges'))
+			    )
+			VAR TotalCount = SUMX(FreqTable, [Freq])
+			VAR CumulativeTable =
+			    ADDCOLUMNS(
+			        FreqTable,
+			        "CumFreq",
+			            VAR CurrentVal = 'Fact_Discharges'[LOS_capped]
+			            RETURN SUMX(FILTER(FreqTable, 'Fact_Discharges'[LOS_capped] <= CurrentVal), [Freq])
+			    )
+			RETURN
+			    MINX(
+			        FILTER(CumulativeTable, [CumFreq] >= TotalCount * 0.25),
+			        'Fact_Discharges'[LOS_capped]
+			    )
+		formatString: 0
+		lineageTag: 0f9c42a5-d7d7-4015-a87b-9d7cdb773fac
+
+	measure P75 =
+			
+			VAR FreqTable =
+			    ADDCOLUMNS(
+			        VALUES('Fact_Discharges'[LOS_capped]),
+			        "Freq", CALCULATE(COUNTROWS('Fact_Discharges'))
+			    )
+			VAR TotalCount = SUMX(FreqTable, [Freq])
+			VAR CumulativeTable =
+			    ADDCOLUMNS(
+			        FreqTable,
+			        "CumFreq",
+			            VAR CurrentVal = 'Fact_Discharges'[LOS_capped]
+			            RETURN SUMX(FILTER(FreqTable, 'Fact_Discharges'[LOS_capped] <= CurrentVal), [Freq])
+			    )
+			RETURN
+			    MINX(
+			        FILTER(CumulativeTable, [CumFreq] >= TotalCount * 0.75),
+			        'Fact_Discharges'[LOS_capped]
+			    )
+		formatString: 0
+		lineageTag: 0ac194df-1827-426d-ad18-ab0a4258133f
+
+	measure 'National P25 (Same Type)' =
+			
+			CALCULATE(
+			    [P25],
+			    ALL('Hospital'),
+			    VALUES('Hospital'[healthcare facility type])
+			)
+		formatString: 0
+		lineageTag: 80b65891-5248-48d0-97ab-0a388127ca52
+
+	measure 'National Median (Same Type)' =
+			
+			CALCULATE(
+			    [Median],
+			    ALL('Hospital'),
+			    VALUES('Hospital'[healthcare facility type])
+			)
+		formatString: 0
+		lineageTag: 33f3f480-1cfa-4445-aa74-4699c79eaff9
+
+	measure 'National P75 (Same Type)' =
+			
+			CALCULATE(
+			    [P75],
+			    ALL('Hospital'),
+			    VALUES('Hospital'[healthcare facility type])
+			)
+		formatString: 0
+		lineageTag: 0ad637cb-89bc-4b53-94ca-63fded68d0b5
 
 	column sex
 		dataType: string
