@@ -16,6 +16,7 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table Diagnosis
 ref table Hospital
 ref table Fact_Discharges
+ref table 'Patient profile dimension'
 
 ref cultureInfo en-US
 

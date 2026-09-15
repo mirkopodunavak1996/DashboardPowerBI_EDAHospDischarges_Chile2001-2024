@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "bfdf5a5054545d4511dd",
+  "name": "343596b7514eb0049a19",
   "position": {
-    "x": 600.41079531884407,
-    "y": 207.88153809410079,
-    "z": 5001,
-    "height": 151.63123955099115,
-    "width": 665.22092190112255,
-    "tabOrder": 5001
+    "x": 563.72581800812043,
+    "y": 374.18676856938146,
+    "z": 5004,
+    "height": 345.79875709810887,
+    "width": 344.42653980803703,
+    "tabOrder": 5004
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "year"
+                  "Property": "age"
                 }
               },
-              "queryRef": "Fact_Discharges.year",
-              "nativeQueryRef": "year",
+              "queryRef": "Fact_Discharges.age",
+              "nativeQueryRef": "age",
               "active": true
             }
           ]
@@ -36,17 +36,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Discharges"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fact_Discharges"
+                        }
+                      },
+                      "Property": "sex"
                     }
                   },
-                  "Property": "Diagnosis Prevalence %"
+                  "Function": 5
                 }
               },
-              "queryRef": "Fact_Discharges.Diagnosis Prevalence %",
-              "nativeQueryRef": "Diagnosis Prevalence %"
+              "queryRef": "CountNonNull(Fact_Discharges.sex)",
+              "nativeQueryRef": "Count of sex"
             }
           ]
         }
@@ -55,19 +60,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Diagnosis Prevalence %"
+                "Property": "age"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "drillFilterOtherVisuals": true
@@ -75,7 +79,26 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0fe31fadc7093c8361a6",
+        "name": "90791bff616343383845",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "sex"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "98dd2430ecd2ce8de111",
         "field": {
           "Column": {
             "Expression": {
@@ -83,24 +106,10 @@
                 "Entity": "Fact_Discharges"
               }
             },
-            "Property": "year"
+            "Property": "age"
           }
         },
-        "type": "Advanced"
-      },
-      {
-        "name": "31d52ac024a1cb6bbb1e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "Diagnosis Prevalence %"
-          }
-        },
-        "type": "Advanced"
+        "type": "Categorical"
       }
     ]
   }

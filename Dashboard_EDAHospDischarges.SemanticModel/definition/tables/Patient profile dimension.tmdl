@@ -1,0 +1,48 @@
+table 'Patient profile dimension'
+	lineageTag: 5ce44c5a-85ed-4797-be50-89cea867618b
+
+	column 'Patient profile dimension'
+		lineageTag: bd2a2fba-f337-414d-ac89-ae48c8a00004
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Patient profile dimension Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Patient profile dimension Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Patient profile dimension Fields'
+		isHidden
+		lineageTag: 44b52e58-81be-4480-bbdd-fa746c25fa6a
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Patient profile dimension Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Patient profile dimension Order'
+		isHidden
+		formatString: 0
+		lineageTag: f464ea4d-1704-4816-a03d-a1586b4ae715
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Patient profile dimension' = calculated
+		mode: import
+		source =
+				{
+				    ("sex", NAMEOF('Fact_Discharges'[sex]), 0),
+				    ("health insurance", NAMEOF('Fact_Discharges'[health insurance]), 1)
+				}
+
+	annotation PBI_Id = 7fc1855535664d5a92276ba47d412708
+

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a213f5eaeabecc73b1ea",
+  "name": "d2e85482962c3ad052c9",
   "position": {
-    "x": 944.02674946262243,
-    "y": 14.673990924289468,
-    "z": 1000,
+    "x": 506.34818003651657,
+    "y": 59.005343473090008,
+    "z": 1,
     "height": 185.24933415970119,
     "width": 321.0988458768154,
-    "tabOrder": 1000
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "slicer",
@@ -255,66 +255,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f508d1ac80acea334b0c",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Hierarchy": "Diagnosis Hierarchy"
-              }
-            },
-            "Level": "chapter names"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "222937c0b57301333681",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Hierarchy": "Diagnosis Hierarchy"
-              }
-            },
-            "Level": "group names"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dcbfdf90635d73480370",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Hierarchy": "Diagnosis Hierarchy"
-              }
-            },
-            "Level": "primary diagnosis name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

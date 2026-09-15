@@ -46,6 +46,19 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 900,
+            "y": 72
+          },
+          "nodeIndex": "Patient profile dimension",
+          "nodeLineageTag": "5ce44c5a-85ed-4797-be50-89cea867618b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
