@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 187.09338428469073,
-    "z": 5002,
+    "z": 5000,
     "height": 119.38290423625187,
     "width": 576.33126183018146,
-    "tabOrder": 5002
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -204,65 +204,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ffec0a348590888845b3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "81f5c1e84a326d730d27",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "P25"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ca8fabcbc7b80cce4318",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "Median"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d70f8272b4d2d31c0d83",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "P75"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

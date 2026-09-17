@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "bfdf5a5054545d4511dd",
+  "name": "56a05e48ca770b793736",
   "position": {
-    "x": 600.41079531884407,
-    "y": 207.88153809410079,
-    "z": 4000,
-    "height": 151.63123955099115,
-    "width": 665.22092190112255,
-    "tabOrder": 4000
+    "x": 721.78629457779869,
+    "y": 122.12733881639559,
+    "z": 8000,
+    "height": 205.43587294005255,
+    "width": 533.15500358251734,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "lineChart",
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Y": {
+        "Y2": {
           "projections": [
             {
               "field": {
@@ -42,11 +42,25 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Diagnosis Prevalence %"
+                  "Property": "% Private Discharges"
                 }
               },
-              "queryRef": "Fact_Discharges.Diagnosis Prevalence %",
-              "nativeQueryRef": "Diagnosis Prevalence %"
+              "queryRef": "Fact_Discharges.% Private Discharges",
+              "nativeQueryRef": "% Private Discharges"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "% Public Discharges"
+                }
+              },
+              "queryRef": "Fact_Discharges.% Public Discharges",
+              "nativeQueryRef": "% Public Discharges"
             }
           ]
         }
@@ -61,7 +75,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Diagnosis Prevalence %"
+                "Property": "% Private Discharges"
               }
             },
             "direction": "Descending"

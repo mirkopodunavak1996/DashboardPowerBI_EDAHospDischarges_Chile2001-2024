@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "c202f6812907a9d09c4c",
+  "name": "b7f22c9229ab0a1007ae",
   "position": {
-    "x": 463.45354669214237,
-    "y": 22.0109863864342,
-    "z": 3000,
-    "height": 171.19656078337712,
-    "width": 353.39861475997134,
-    "tabOrder": 3000
+    "x": 299.1433692356656,
+    "y": 12.349955610646745,
+    "z": 2000,
+    "height": 82.333037404311639,
+    "width": 365.00979915911489,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Hospital"
+                      "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "healthcare facility name"
+                  "Property": "healthcare facility type"
                 }
               },
-              "queryRef": "Hospital.healthcare facility name",
-              "nativeQueryRef": "healthcare facility name",
+              "queryRef": "Fact_Discharges.healthcare facility type",
+              "nativeQueryRef": "healthcare facility type",
               "active": true
             }
           ]
@@ -50,25 +50,28 @@
       ],
       "general": [
         {
-          "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "db5dcb53ab75b21d0234",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "healthcare facility type"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "e32ecc8edd06193e0020",
+  "name": "ebe7eb107bd691ed850b",
   "position": {
-    "x": 917.12443276809176,
-    "y": 450.00238834487703,
-    "z": 8000,
+    "x": 334.821018777534,
+    "y": 462.437226754217,
+    "z": 4000,
     "height": 253.8601986632942,
     "width": 304.63223839595304,
-    "tabOrder": 8000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pieChart",
@@ -28,24 +28,8 @@
               },
               "queryRef": "Fact_Discharges.sex",
               "nativeQueryRef": "sex",
-              "active": false,
-              "displayName": "sex"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Discharges"
-                    }
-                  },
-                  "Property": "health insurance"
-                }
-              },
-              "queryRef": "Fact_Discharges.health insurance",
-              "nativeQueryRef": "health insurance",
               "active": true,
-              "displayName": "health insurance"
+              "displayName": "sex"
             }
           ],
           "fieldParameters": [
@@ -61,7 +45,7 @@
                 }
               },
               "index": 0,
-              "length": 2
+              "length": 1
             }
           ]
         },
@@ -114,5 +98,42 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fa3c0265850311560621",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "discharge condition"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8747db8a23aa30d9bbc0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "sex"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

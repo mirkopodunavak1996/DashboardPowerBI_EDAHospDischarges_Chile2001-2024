@@ -1,14 +1,6 @@
 table Hospital
 	lineageTag: 3f068ffd-0026-4795-8c71-0d17f860edb7
 
-	column 'healthcare facility type'
-		dataType: string
-		lineageTag: f5884256-981f-48a0-9672-2d84a0de11da
-		summarizeBy: none
-		sourceColumn: healthcare facility type
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'healthcare facility name'
 		dataType: string
 		lineageTag: 0124de33-5e4b-41b6-b5e3-35b03fac07db
@@ -25,9 +17,10 @@ table Hospital
 				    #"Removed Other Columns" = Table.SelectColumns(Source,{"healthcare facility type", "healthcare facility name"}),
 				    #"Trimmed Text" = Table.TransformColumns(#"Removed Other Columns",{{"healthcare facility type", Text.Trim, type text}, {"healthcare facility name", Text.Trim, type text}}),
 				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"healthcare facility type", Text.Clean, type text}, {"healthcare facility name", Text.Clean, type text}}),
-				    #"Removed Duplicates" = Table.Distinct(#"Cleaned Text", {"healthcare facility name"})
+				    #"Removed Duplicates" = Table.Distinct(#"Cleaned Text", {"healthcare facility name"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Duplicates",{"healthcare facility type"})
 				in
-				    #"Removed Duplicates"
+				    #"Removed Columns"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 12.349955610646745,
-    "z": 1,
+    "z": 1000,
     "height": 91.938558434814652,
     "width": 299.1433692356656,
-    "tabOrder": 1
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "slicer",
@@ -38,10 +38,10 @@
       "data": [
         {
           "properties": {
-            "numericStart": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "2006D"
+                  "Value": "'Between'"
                 }
               }
             },
@@ -52,10 +52,10 @@
                 }
               }
             },
-            "mode": {
+            "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "'Between'"
+                  "Value": "2006D"
                 }
               }
             }

@@ -102,7 +102,7 @@ table Fact_Discharges
 			CALCULATE(
 			    [P25],
 			    ALL('Hospital'),
-			    VALUES('Hospital'[healthcare facility type])
+			    VALUES('Fact_Discharges'[healthcare facility type])
 			)
 		formatString: 0
 		lineageTag: 80b65891-5248-48d0-97ab-0a388127ca52
@@ -112,7 +112,7 @@ table Fact_Discharges
 			CALCULATE(
 			    [Median],
 			    ALL('Hospital'),
-			    VALUES('Hospital'[healthcare facility type])
+			    VALUES('Fact_Discharges'[healthcare facility type])
 			)
 		formatString: 0
 		lineageTag: 33f3f480-1cfa-4445-aa74-4699c79eaff9
@@ -122,10 +122,40 @@ table Fact_Discharges
 			CALCULATE(
 			    [P75],
 			    ALL('Hospital'),
-			    VALUES('Hospital'[healthcare facility type])
+			    VALUES('Fact_Discharges'[healthcare facility type])
 			)
 		formatString: 0
 		lineageTag: 0ad637cb-89bc-4b53-94ca-63fded68d0b5
+
+	measure '% Public Discharges' =
+			
+			VAR TotalAll =
+			    CALCULATE(COUNTROWS('Fact_Discharges'), REMOVEFILTERS('Fact_Discharges'[healthcare facility type]))
+			VAR PublicCount =
+			    CALCULATE(
+			        COUNTROWS('Fact_Discharges'),
+			        REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
+			        'Fact_Discharges'[healthcare facility type] = "Public"
+			    )
+			RETURN
+			    DIVIDE(PublicCount, TotalAll)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5351e2a9-d6f1-443b-8189-9c7e7cd98139
+
+	measure '% Private Discharges' =
+			
+			VAR TotalAll =
+			    CALCULATE(COUNTROWS('Fact_Discharges'), REMOVEFILTERS('Fact_Discharges'[healthcare facility type]))
+			VAR PrivateCount =
+			    CALCULATE(
+			        COUNTROWS('Fact_Discharges'),
+			        REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
+			        'Fact_Discharges'[healthcare facility type] = "Private"
+			    )
+			RETURN
+			    DIVIDE(PrivateCount, TotalAll)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 43c9ef2f-1564-4563-a27e-1a9920fb6612
 
 	column sex
 		dataType: string
@@ -202,6 +232,14 @@ table Fact_Discharges
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'healthcare facility type'
+		dataType: string
+		lineageTag: 9e7ba1d9-c042-4701-8d7a-85c8167f42ee
+		summarizeBy: none
+		sourceColumn: healthcare facility type
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Fact_Discharges = m
 		mode: import
 		source =
@@ -210,12 +248,13 @@ table Fact_Discharges
 				    #"Removed Columns" = Table.RemoveColumns(Source,{"primary diagnosis name", "chapter codes", "chapter names", "group codes", "group names"}),
 				    #"Trimmed Text" = Table.TransformColumns(#"Removed Columns",{{"primary diagnosis code", Text.Trim, type text}}),
 				    #"Cleaned Text" = Table.TransformColumns(#"Trimmed Text",{{"primary diagnosis code", Text.Clean, type text}}),
-				    #"Removed Columns1" = Table.RemoveColumns(#"Cleaned Text",{"healthcare facility type"}),
-				    #"Trimmed Text1" = Table.TransformColumns(#"Removed Columns1",{{"healthcare facility name", Text.Trim, type text}}),
+				    #"Trimmed Text1" = Table.TransformColumns(#"Cleaned Text",{{"healthcare facility name", Text.Trim, type text}}),
 				    #"Cleaned Text1" = Table.TransformColumns(#"Trimmed Text1",{{"healthcare facility name", Text.Clean, type text}}),
-				    #"Uppercased Text" = Table.TransformColumns(#"Cleaned Text1",{{"primary diagnosis code", Text.Upper, type text}})
+				    #"Uppercased Text" = Table.TransformColumns(#"Cleaned Text1",{{"primary diagnosis code", Text.Upper, type text}}),
+				    #"Trimmed Text2" = Table.TransformColumns(#"Uppercased Text",{{"healthcare facility type", Text.Trim, type text}}),
+				    #"Cleaned Text2" = Table.TransformColumns(#"Trimmed Text2",{{"healthcare facility type", Text.Clean, type text}})
 				in
-				    #"Uppercased Text"
+				    #"Cleaned Text2"
 
 	annotation PBI_NavigationStepName = Navigation
 

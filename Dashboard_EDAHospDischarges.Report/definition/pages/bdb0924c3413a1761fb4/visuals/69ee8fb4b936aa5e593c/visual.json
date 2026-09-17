@@ -4,10 +4,10 @@
   "position": {
     "x": 13.451158347265345,
     "y": 546.60616192978273,
-    "z": 5003,
+    "z": 6000,
     "height": 156.52256985908767,
     "width": 507.47551946501073,
-    "tabOrder": 5003
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -240,93 +240,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "eca586f889b0540ae5bc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "P25"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "eaed370a99ee4074ab17",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "National P25 (Same Type)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b0c1696e3c22911b18c8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "Median"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b5ac92ded4ddb3d3c860",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "National Median (Same Type)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0c6dfec64ddb539e45c0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "P75"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "083bcbde36b003b93360",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "National P75 (Same Type)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

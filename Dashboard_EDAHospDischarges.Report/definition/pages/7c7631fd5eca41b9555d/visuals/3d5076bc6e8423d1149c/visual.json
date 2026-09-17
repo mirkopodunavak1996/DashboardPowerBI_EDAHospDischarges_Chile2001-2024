@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "343596b7514eb0049a19",
+  "name": "3d5076bc6e8423d1149c",
   "position": {
-    "x": 563.72581800812043,
-    "y": 374.18676856938146,
-    "z": 7000,
-    "height": 345.79875709810887,
-    "width": 344.42653980803703,
-    "tabOrder": 7000
+    "x": 35.677649541868377,
+    "y": 462.437226754217,
+    "z": 3000,
+    "height": 253.8601986632942,
+    "width": 284.04897904487513,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pieChart",
@@ -75,5 +75,42 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "37b4c6360b2ed002e485",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "age"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b6682ea9c41688805170",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "sex"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

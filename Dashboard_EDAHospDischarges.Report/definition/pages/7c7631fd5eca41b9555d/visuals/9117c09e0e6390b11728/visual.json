@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "8554d5f1ea1a2a1ea0dc",
+  "name": "9117c09e0e6390b11728",
   "position": {
-    "x": 238.45235251970385,
-    "y": 309.37664198710297,
-    "z": 1000,
-    "height": 241.51024305264747,
-    "width": 156.4327710681921,
-    "tabOrder": 1000
+    "x": 35.677649541868377,
+    "y": 148.19946732776094,
+    "z": 7000,
+    "height": 211.32146267106654,
+    "width": 299.1433692356656,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Median"
+                  "Property": "% Public Discharges"
                 }
               },
-              "queryRef": "Fact_Discharges.Median LOS Exact",
-              "nativeQueryRef": "Median"
+              "queryRef": "Fact_Discharges.% Public Discharges",
+              "nativeQueryRef": "% Public Discharges"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Median"
+                "Property": "% Public Discharges"
               }
             },
             "direction": "Descending"
@@ -50,35 +50,6 @@
         ],
         "isDefaultSort": true
       }
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Median Length of Stay (days)'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   }
