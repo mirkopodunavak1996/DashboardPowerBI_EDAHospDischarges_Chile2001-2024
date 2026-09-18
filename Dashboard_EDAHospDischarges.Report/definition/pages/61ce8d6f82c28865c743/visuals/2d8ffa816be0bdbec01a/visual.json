@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "2d8ffa816be0bdbec01a",
+  "position": {
+    "x": 0,
+    "y": 226.22402674946264,
+    "z": 1001,
+    "height": 244.56651540482446,
+    "width": 639.541437783616,
+    "tabOrder": 1001
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "year"
+                }
+              },
+              "queryRef": "Fact_Discharges.year",
+              "nativeQueryRef": "year",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "Total Discharges"
+                }
+              },
+              "queryRef": "Fact_Discharges.Total Discharges",
+              "nativeQueryRef": "Total Discharges"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "Diagnosis Prevalence %"
+                }
+              },
+              "queryRef": "Fact_Discharges.Diagnosis Prevalence %",
+              "nativeQueryRef": "Diagnosis Prevalence %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "Total Discharges"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "y2Axis": [
+        {
+          "properties": {
+            "secTitleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% of Total Discharges'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

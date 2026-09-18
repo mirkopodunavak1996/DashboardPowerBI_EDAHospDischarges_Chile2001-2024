@@ -333,7 +333,7 @@
                 }
               }
             },
-            "selfFilter": {
+            "filter": {
               "filter": {
                 "Version": 2,
                 "From": [
@@ -346,87 +346,46 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Or": {
-                        "Left": {
-                          "Or": {
-                            "Left": {
-                              "Contains": {
-                                "Left": {
-                                  "HierarchyLevel": {
-                                    "Expression": {
-                                      "Hierarchy": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "d"
-                                          }
-                                        },
-                                        "Hierarchy": "Diagnosis Hierarchy"
-                                      }
-                                    },
-                                    "Level": "chapter names"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "'diabetes'"
-                                  }
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
                                 }
-                              }
-                            },
-                            "Right": {
-                              "Contains": {
-                                "Left": {
-                                  "HierarchyLevel": {
-                                    "Expression": {
-                                      "Hierarchy": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "d"
-                                          }
-                                        },
-                                        "Hierarchy": "Diagnosis Hierarchy"
-                                      }
-                                    },
-                                    "Level": "group names"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "'diabetes'"
-                                  }
+                              },
+                              "Property": "chapter names"
+                            }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
                                 }
-                              }
+                              },
+                              "Property": "group names"
                             }
                           }
-                        },
-                        "Right": {
-                          "Contains": {
-                            "Left": {
-                              "HierarchyLevel": {
-                                "Expression": {
-                                  "Hierarchy": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Source": "d"
-                                      }
-                                    },
-                                    "Hierarchy": "Diagnosis Hierarchy"
-                                  }
-                                },
-                                "Level": "primary diagnosis name"
-                              }
-                            },
-                            "Right": {
+                        ],
+                        "Values": [
+                          [
+                            {
                               "Literal": {
-                                "Value": "'diabetes'"
+                                "Value": "'tumores [neoplasias]'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'tumores malignos del ojo, del encéfalo y de otras partes del sistema nervioso central'"
                               }
                             }
-                          }
-                        }
+                          ]
+                        ]
                       }
                     },
                     "Annotations": {
-                      "PowerBI.MParameterBehavior": 1,
                       "filterExpressionMetadata": {
                         "expressions": [
                           {
@@ -458,21 +417,6 @@
                               },
                               "Level": "group names"
                             }
-                          },
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Hierarchy": "Diagnosis Hierarchy"
-                                }
-                              },
-                              "Level": "primary diagnosis name"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -482,7 +426,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                      "Value": "'tumores [neoplasias]'"
                                     }
                                   }
                                 ]
@@ -491,123 +435,7 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "'trastornos endocrinos y metabólicos transitorios específicos del feto y del recién nacido'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'diabetes mellitus neonatal'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema genitourinario'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'otros trastornos del riñón y del uréter'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'diabetes insipida nefrogena'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades endocrinas, nutricionales y metabólicas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'diabetes mellitus'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades endocrinas, nutricionales y metabólicas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'trastornos de otras glándulas endocrinas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'diabetes insipida'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'factores que influyen en el estado de salud y contacto con los  servicios de salud'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'personas con riesgos potenciales para su salud, relacionados con su historia familiar y personal, y algunas condiciones que influyen sobre su estado de salud'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'historia familiar de diabetes mellitus'"
+                                      "Value": "'tumores malignos del ojo, del encéfalo y de otras partes del sistema nervioso central'"
                                     }
                                   }
                                 ]
@@ -638,213 +466,15 @@
                                   "Property": "group names"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Property": "primary diagnosis name"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "ciertas afecciones originadas en el período perinatal",
-                            "1": "trastornos endocrinos y metabólicos transitorios específicos del feto y del recién nacido",
-                            "2": "diabetes mellitus neonatal"
-                          },
-                          {
-                            "0": "enfermedades del sistema genitourinario",
-                            "1": "otros trastornos del riñón y del uréter",
-                            "2": "diabetes insipida nefrogena"
-                          },
-                          {
-                            "0": "enfermedades endocrinas, nutricionales y metabólicas",
-                            "1": "diabetes mellitus"
-                          },
-                          {
-                            "0": "enfermedades endocrinas, nutricionales y metabólicas",
-                            "1": "trastornos de otras glándulas endocrinas",
-                            "2": "diabetes insipida"
-                          },
-                          {
-                            "0": "factores que influyen en el estado de salud y contacto con los  servicios de salud",
-                            "1": "personas con riesgos potenciales para su salud, relacionados con su historia familiar y personal, y algunas condiciones que influyen sobre su estado de salud",
-                            "2": "historia familiar de diabetes mellitus"
+                            "0": "tumores [neoplasias]",
+                            "1": "tumores malignos del ojo, del encéfalo y de otras partes del sistema nervioso central"
                           }
                         ]
-                      }
-                    }
-                  }
-                ]
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "Diagnosis",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Or": {
-                        "Left": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "chapter names"
-                                }
-                              },
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "group names"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'enfermedades endocrinas, nutricionales y metabólicas'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'diabetes mellitus'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "Right": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "chapter names"
-                                }
-                              },
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "group names"
-                                }
-                              },
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "primary diagnosis name"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'ciertas afecciones originadas en el período perinatal'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'trastornos endocrinos y metabólicos transitorios específicos del feto y del recién nacido'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'diabetes mellitus neonatal'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'enfermedades del sistema genitourinario'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'otros trastornos del riñón y del uréter'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'diabetes insipida nefrogena'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'enfermedades endocrinas, nutricionales y metabólicas'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'trastornos de otras glándulas endocrinas'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'diabetes insipida'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'factores que influyen en el estado de salud y contacto con los  servicios de salud'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'personas con riesgos potenciales para su salud, relacionados con su historia familiar y personal, y algunas condiciones que influyen sobre su estado de salud'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'historia familiar de diabetes mellitus'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
                       }
                     }
                   }
