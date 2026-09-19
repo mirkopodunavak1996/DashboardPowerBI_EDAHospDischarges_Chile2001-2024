@@ -1,6 +1,33 @@
 table Diagnosis
 	lineageTag: 27ec9941-72e0-4e67-8dfb-7936eb4f7e23
 
+	measure 'Chapter LOS Rank' =
+			
+			RANKX(
+			    ALL('Diagnosis'[chapter names]),
+			    CALCULATE(
+			        [Total LOS Days],
+			        REMOVEFILTERS('Diagnosis'[group names]),
+			        REMOVEFILTERS('Diagnosis'[primary diagnosis code]),
+			        REMOVEFILTERS('Diagnosis'[primary diagnosis name])
+			    )
+			)
+		formatString: 0
+		lineageTag: 7f9e4dca-a9f6-4441-95a4-ee7b02ba59aa
+
+	measure 'Group LOS Rank' =
+			
+			RANKX(
+			    ALL('Diagnosis'[group names]),
+			    CALCULATE(
+			        [Total LOS Days],
+			        REMOVEFILTERS('Diagnosis'[primary diagnosis code]),
+			        REMOVEFILTERS('Diagnosis'[primary diagnosis name])
+			    )
+			)
+		formatString: 0
+		lineageTag: fafcbfd8-4f1c-4f77-bad2-f211604c50f0
+
 	column 'primary diagnosis code'
 		dataType: string
 		lineageTag: 7f07456f-07ff-4b26-b197-1c72f5dd14f3

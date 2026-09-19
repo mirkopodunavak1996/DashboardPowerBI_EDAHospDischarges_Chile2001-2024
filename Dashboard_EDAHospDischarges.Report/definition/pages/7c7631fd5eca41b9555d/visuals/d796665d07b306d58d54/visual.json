@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''Fact_Discharges''[sex]'"
+                                "Value": "'''Fact_Discharges''[health insurance]'"
                               }
                             }
                           ]
@@ -109,7 +109,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''Fact_Discharges''[sex]'"
+                                      "Value": "'''Fact_Discharges''[health insurance]'"
                                     }
                                   }
                                 ]
@@ -133,7 +133,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "sex"
+                            "0": "health insurance"
                           }
                         ]
                       }

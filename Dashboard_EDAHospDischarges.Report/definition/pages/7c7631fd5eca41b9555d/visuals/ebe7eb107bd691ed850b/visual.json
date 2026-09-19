@@ -23,13 +23,13 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "sex"
+                  "Property": "health insurance"
                 }
               },
-              "queryRef": "Fact_Discharges.sex",
-              "nativeQueryRef": "sex",
+              "queryRef": "Fact_Discharges.health insurance",
+              "nativeQueryRef": "health insurance",
               "active": true,
-              "displayName": "sex"
+              "displayName": "health insurance"
             }
           ],
           "fieldParameters": [
@@ -119,20 +119,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "8747db8a23aa30d9bbc0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "sex"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

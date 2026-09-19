@@ -196,6 +196,10 @@ table Fact_Discharges
 		formatString: 0
 		lineageTag: 44a6731a-1478-49a5-a1a5-b33de2a84f5e
 
+	measure 'Total LOS Days' = SUM('Fact_Discharges'[LOS_capped])
+		formatString: 0
+		lineageTag: a50e534e-e3db-4e15-be91-2c71a43fb3d5
+
 	column sex
 		dataType: string
 		lineageTag: 6864dc0b-1817-4b8d-9153-731cb6e365a4
