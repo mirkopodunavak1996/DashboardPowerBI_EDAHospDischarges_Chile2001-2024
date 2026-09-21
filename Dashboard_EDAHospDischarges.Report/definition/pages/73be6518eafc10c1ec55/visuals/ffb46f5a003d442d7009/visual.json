@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "d796665d07b306d58d54",
+  "name": "ffb46f5a003d442d7009",
   "position": {
-    "x": 334.821018777534,
-    "y": 380.10418934990537,
-    "z": 5000,
-    "height": 82.333037404311639,
-    "width": 304.63223839595304,
-    "tabOrder": 5000
+    "x": 622.42178170527825,
+    "y": 158.96823501313591,
+    "z": 8000,
+    "height": 125.95175543348459,
+    "width": 173.64222593742537,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Patient profile dimension"
+                      "Entity": "Profile metric"
                     }
                   },
-                  "Property": "Patient profile dimension"
+                  "Property": "Profile metric"
                 }
               },
-              "queryRef": "Patient profile dimension.Patient profile dimension",
-              "nativeQueryRef": "Patient profile dimension",
+              "queryRef": "Profile metric.Profile metric",
+              "nativeQueryRef": "Profile metric",
               "active": true
             }
           ]
@@ -35,19 +35,6 @@
       }
     },
     "objects": {
-      "data": [
-        {
-          "properties": {
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Basic'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "general": [
         {
           "properties": {
@@ -57,7 +44,7 @@
                 "From": [
                   {
                     "Name": "p",
-                    "Entity": "Patient profile dimension",
+                    "Entity": "Profile metric",
                     "Type": 0
                   }
                 ],
@@ -73,7 +60,7 @@
                                   "Source": "p"
                                 }
                               },
-                              "Property": "Patient profile dimension Fields"
+                              "Property": "Profile metric Fields"
                             }
                           }
                         ],
@@ -81,7 +68,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''Fact_Discharges''[health insurance]'"
+                                "Value": "'''Fact_Discharges''[Mortality Rate]'"
                               }
                             }
                           ]
@@ -95,10 +82,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "Patient profile dimension"
+                                  "Entity": "Profile metric"
                                 }
                               },
-                              "Property": "Patient profile dimension"
+                              "Property": "Profile metric"
                             }
                           }
                         ],
@@ -109,7 +96,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''Fact_Discharges''[health insurance]'"
+                                      "Value": "'''Fact_Discharges''[Mortality Rate]'"
                                     }
                                   }
                                 ]
@@ -122,10 +109,10 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Patient profile dimension"
+                                      "Entity": "Profile metric"
                                     }
                                   },
-                                  "Property": "Patient profile dimension Fields"
+                                  "Property": "Profile metric Fields"
                                 }
                               }
                             }
@@ -133,7 +120,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "health insurance"
+                            "0": "Mortality Rate"
                           }
                         ]
                       }
@@ -147,5 +134,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f913dc6d4ca38eb6b53c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Profile metric"
+              }
+            },
+            "Property": "Profile metric"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

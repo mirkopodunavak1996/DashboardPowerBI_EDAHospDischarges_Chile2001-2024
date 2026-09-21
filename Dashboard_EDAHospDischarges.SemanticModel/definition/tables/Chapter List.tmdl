@@ -1,0 +1,17 @@
+table 'Chapter List'
+	lineageTag: 207a329b-59cc-4936-b665-c8985bc2231b
+
+	column 'chapter names'
+		lineageTag: d1c3b723-9126-424c-ae95-0aa742baefc3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Diagnosis[chapter names]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Chapter List' = calculated
+		mode: import
+		source = DISTINCT('Diagnosis'[chapter names])
+
+	annotation PBI_Id = d105e8ad497e4e39b772259b5d3fa1b4
+

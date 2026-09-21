@@ -4,5 +4,12 @@
   "displayName": "Patient Association",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "05905e99096c2e27787b",
+      "target": "7cae526d0208d529180e",
+      "type": "DataFilter"
+    }
+  ]
 }

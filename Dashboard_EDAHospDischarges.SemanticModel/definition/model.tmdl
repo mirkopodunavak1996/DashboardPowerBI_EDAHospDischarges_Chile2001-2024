@@ -17,6 +17,9 @@ ref table Diagnosis
 ref table Hospital
 ref table Fact_Discharges
 ref table 'Patient profile dimension'
+ref table 'Profile metric'
+ref table 'Chapter List'
+ref table 'Group List'
 
 ref cultureInfo en-US
 

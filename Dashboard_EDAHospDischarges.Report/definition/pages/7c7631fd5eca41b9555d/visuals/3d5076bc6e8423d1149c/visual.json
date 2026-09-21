@@ -75,42 +75,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "37b4c6360b2ed002e485",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "age"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b6682ea9c41688805170",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "sex"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,0 +1,17 @@
+table 'Group List'
+	lineageTag: 1aaef8a6-d942-437a-b0c9-64e15f5ff0de
+
+	column 'group names'
+		lineageTag: 49368953-418e-4485-a846-b26f963ea0fd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Diagnosis[group names]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Group List' = calculated
+		mode: import
+		source = DISTINCT('Diagnosis'[group names])
+
+	annotation PBI_Id = d27bd9b8e38c46fe94f97363729c8bce
+

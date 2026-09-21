@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "56399e262e4ce83210b3",
   "position": {
-    "x": 612.63912108908528,
-    "y": 397.42058753283976,
-    "z": 2002,
-    "height": 150,
-    "width": 299,
-    "tabOrder": 1002
+    "x": 13.722172900718606,
+    "y": 8.2333037404311629,
+    "z": 3000,
+    "height": 133.10507713697046,
+    "width": 396.57079683076773,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,37 +20,40 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Diagnosis"
+                      "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Chapter LOS Rank"
+                  "Property": "Chapter Rank Display"
                 }
               },
-              "queryRef": "Diagnosis.Chapter LOS Rank",
-              "nativeQueryRef": "Chapter LOS Rank"
+              "queryRef": "Fact_Discharges.Chapter Rank Display",
+              "nativeQueryRef": "Chapter Rank Display"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Property": "Chapter LOS Rank"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4575bde61552012cd910",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "Chapter Rank Display"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

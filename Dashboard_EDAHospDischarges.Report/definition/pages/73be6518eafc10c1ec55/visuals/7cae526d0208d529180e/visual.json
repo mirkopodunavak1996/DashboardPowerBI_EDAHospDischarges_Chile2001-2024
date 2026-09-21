@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "7cae526d0208d529180e",
   "position": {
-    "x": 539.26916646763789,
-    "y": 11.0054931932171,
-    "z": 2000,
-    "height": 313.04513971817534,
-    "width": 701.90589921184619,
+    "x": 724.53072915794235,
+    "y": 12.349955610646745,
+    "z": 1000,
+    "height": 128.98842526675489,
+    "width": 500.85931087622913,
     "tabOrder": 1000
   },
   "visual": {
@@ -278,7 +278,19 @@
                   }
                 }
               ],
-              "isToggled": true
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'afecciones asociadas con la regulación tegumentaria y la temperatura del feto y del recién nacido'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
             },
             {
               "identityValues": [
@@ -311,6 +323,48 @@
                   "isToggled": true
                 }
               ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'traumatismos, envenenamientos y algunas otras consecuencias de causas externas'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'otros efectos y los no especificados de causas externas'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'complicaciones de la atención médica y quirúrgica, no clasificadas en otra parte'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'enfermedades del sistema genitourinario'"
+                  }
+                }
+              ],
+              "isToggled": true
             }
           ]
         }
@@ -366,28 +420,13 @@
                                   },
                                   "Property": "chapter names"
                                 }
-                              },
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "group names"
-                                }
                               }
                             ],
                             "Values": [
                               [
                                 {
                                   "Literal": {
-                                    "Value": "'enfermedades del sistema digestivo'"
-                                  }
-                                },
-                                {
-                                  "Literal": {
-                                    "Value": "'enteritis y colitis no infecciosas'"
+                                    "Value": "'enfermedades del sistema genitourinario'"
                                   }
                                 }
                               ]
@@ -418,118 +457,18 @@
                                       },
                                       "Property": "group names"
                                     }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "primary diagnosis name"
-                                    }
                                   }
                                 ],
                                 "Values": [
                                   [
                                     {
                                       "Literal": {
-                                        "Value": "'enfermedades del sistema digestivo'"
+                                        "Value": "'enfermedades del sistema genitourinario'"
                                       }
                                     },
                                     {
                                       "Literal": {
-                                        "Value": "'enteritis y colitis no infecciosas'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'colitis de etiologia indeterminada'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedades del sistema digestivo'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enteritis y colitis no infecciosas'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'colitis del lado izquierdo'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedades del sistema digestivo'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enteritis y colitis no infecciosas'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'colitis ulcerativa, sin otra especificacion'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedades del sistema digestivo'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enteritis y colitis no infecciosas'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'colitis y gastroenteritis alergicas y dieteticas'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedades del sistema digestivo'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enteritis y colitis no infecciosas'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedad de crohn del intestino grueso'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedades del sistema digestivo'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enteritis y colitis no infecciosas'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedad de crohn del intestino delgado'"
+                                        "Value": "'enfermedad renal tubulointersticial'"
                                       }
                                     }
                                   ]
@@ -572,21 +511,6 @@
                               },
                               "Level": "group names"
                             }
-                          },
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Hierarchy": "Diagnosis Hierarchy"
-                                }
-                              },
-                              "Level": "primary diagnosis name"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -596,16 +520,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
+                                      "Value": "'enfermedades del sistema genitourinario'"
                                     }
                                   }
                                 ]
@@ -616,7 +531,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
+                                      "Value": "'enfermedades del sistema genitourinario'"
                                     }
                                   }
                                 ]
@@ -625,161 +540,7 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'colitis de etiologia indeterminada'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'colitis del lado izquierdo'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'colitis ulcerativa, sin otra especificacion'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'colitis y gastroenteritis alergicas y dieteticas'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedad de crohn del intestino delgado'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema digestivo'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enteritis y colitis no infecciosas'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "2": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedad de crohn del intestino grueso'"
+                                      "Value": "'enfermedad renal tubulointersticial'"
                                     }
                                   }
                                 ]
@@ -810,55 +571,16 @@
                                   "Property": "group names"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Property": "primary diagnosis name"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas"
+                            "0": "enfermedades del sistema genitourinario"
                           },
                           {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas",
-                            "2": "colitis de etiologia indeterminada"
-                          },
-                          {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas",
-                            "2": "colitis del lado izquierdo"
-                          },
-                          {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas",
-                            "2": "colitis ulcerativa, sin otra especificacion"
-                          },
-                          {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas",
-                            "2": "colitis y gastroenteritis alergicas y dieteticas"
-                          },
-                          {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas",
-                            "2": "enfermedad de crohn del intestino delgado"
-                          },
-                          {
-                            "0": "enfermedades del sistema digestivo",
-                            "1": "enteritis y colitis no infecciosas",
-                            "2": "enfermedad de crohn del intestino grueso"
+                            "0": "enfermedades del sistema genitourinario",
+                            "1": "enfermedad renal tubulointersticial"
                           }
                         ]
                       }
@@ -877,5 +599,66 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "12106348200d7a580e53",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "chapter names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9597b575736439ec8980",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "group names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6e7850ff91b8cd40ddbd",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "primary diagnosis name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

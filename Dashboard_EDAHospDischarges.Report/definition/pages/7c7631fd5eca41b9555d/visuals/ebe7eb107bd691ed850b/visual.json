@@ -98,28 +98,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fa3c0265850311560621",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "discharge condition"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

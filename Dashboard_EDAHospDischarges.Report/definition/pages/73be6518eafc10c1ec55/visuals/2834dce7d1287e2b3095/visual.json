@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "b7f22c9229ab0a1007ae",
+  "name": "2834dce7d1287e2b3095",
   "position": {
-    "x": 299.1433692356656,
-    "y": 12.349955610646745,
-    "z": 2000,
-    "height": 82.333037404311639,
-    "width": 365.00979915911489,
-    "tabOrder": 2000
+    "x": 804.62383568187249,
+    "y": 158.96823501313591,
+    "z": 8002,
+    "height": 125.95175543348459,
+    "width": 189.53904943873897,
+    "tabOrder": 8002
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fact_Discharges"
+                      "Entity": "Patient profile dimension"
                     }
                   },
-                  "Property": "healthcare facility type"
+                  "Property": "Patient profile dimension"
                 }
               },
-              "queryRef": "Fact_Discharges.healthcare facility type",
-              "nativeQueryRef": "healthcare facility type",
+              "queryRef": "Patient profile dimension.Patient profile dimension",
+              "nativeQueryRef": "Patient profile dimension",
               "active": true
             }
           ]

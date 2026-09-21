@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "e32ecc8edd06193e0020",
+  "name": "09451c6a8be84b8b3a39",
   "position": {
-    "x": 917.12443276809176,
-    "y": 450.00238834487703,
-    "z": 8000,
-    "height": 253.8601986632942,
-    "width": 304.63223839595304,
-    "tabOrder": 8000
+    "x": 622.42178170527825,
+    "y": 294.70265106281346,
+    "z": 8001,
+    "height": 210.32720324814903,
+    "width": 363.18127537616431,
+    "tabOrder": 8001
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "age"
+                }
+              },
+              "queryRef": "Fact_Discharges.age",
+              "nativeQueryRef": "age",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
           "projections": [
             {
               "field": {
@@ -28,24 +47,7 @@
               },
               "queryRef": "Fact_Discharges.sex",
               "nativeQueryRef": "sex",
-              "active": true,
               "displayName": "sex"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Discharges"
-                    }
-                  },
-                  "Property": "health insurance"
-                }
-              },
-              "queryRef": "Fact_Discharges.health insurance",
-              "nativeQueryRef": "health insurance",
-              "active": false,
-              "displayName": "health insurance"
             }
           ],
           "fieldParameters": [
@@ -61,7 +63,7 @@
                 }
               },
               "index": 0,
-              "length": 2
+              "length": 1
             }
           ]
         },
@@ -69,22 +71,34 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Discharges"
-                        }
-                      },
-                      "Property": "discharge condition"
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
                     }
                   },
-                  "Function": 5
+                  "Property": "Mortality Rate"
                 }
               },
-              "queryRef": "CountNonNull(Fact_Discharges.discharge condition)",
-              "nativeQueryRef": "Count of discharge condition"
+              "queryRef": "Fact_Discharges.Mortality Rate",
+              "nativeQueryRef": "Mortality Rate",
+              "displayName": "Mortality Rate"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Profile metric"
+                    }
+                  },
+                  "Property": "Profile metric"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         }
@@ -93,18 +107,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Fact_Discharges"
-                      }
-                    },
-                    "Property": "discharge condition"
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
                   }
                 },
-                "Function": 5
+                "Property": "Mortality Rate"
               }
             },
             "direction": "Descending"

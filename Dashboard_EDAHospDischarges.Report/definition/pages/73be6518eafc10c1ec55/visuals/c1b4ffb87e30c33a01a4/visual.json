@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "3a9591c2980c09c96a08",
+  "name": "c1b4ffb87e30c33a01a4",
   "position": {
-    "x": 354.62144733699546,
-    "y": 37.907809887747788,
-    "z": 6000,
-    "height": 150,
-    "width": 341,
-    "tabOrder": 6000
+    "x": 330.16479579651303,
+    "y": 294.70265106281346,
+    "z": 7000,
+    "height": 210.32720324814903,
+    "width": 324.05063291139243,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "health insurance"
+                  "Property": "year"
                 }
               },
-              "queryRef": "Fact_Discharges.health insurance",
-              "nativeQueryRef": "health insurance",
+              "queryRef": "Fact_Discharges.year",
+              "nativeQueryRef": "year",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Discharges"
-                        }
-                      },
-                      "Property": "sex"
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
                     }
                   },
-                  "Function": 5
+                  "Property": "Median"
                 }
               },
-              "queryRef": "CountNonNull(Fact_Discharges.sex)",
-              "nativeQueryRef": "Count of sex"
+              "queryRef": "Fact_Discharges.Median",
+              "nativeQueryRef": "Median"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Fact_Discharges"
-                      }
-                    },
-                    "Property": "sex"
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
                   }
                 },
-                "Function": 5
+                "Property": "Median"
               }
             },
             "direction": "Descending"

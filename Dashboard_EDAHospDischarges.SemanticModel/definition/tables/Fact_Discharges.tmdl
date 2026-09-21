@@ -200,6 +200,48 @@ table Fact_Discharges
 		formatString: 0
 		lineageTag: a50e534e-e3db-4e15-be91-2c71a43fb3d5
 
+	measure 'Total LOS Days (All Chapters)' =
+			
+			VAR SelectedChapter = SELECTEDVALUE('Chapter List'[chapter names])
+			RETURN
+			CALCULATE(
+			    [Total LOS Days],
+			    TREATAS({SelectedChapter}, 'Diagnosis'[chapter names]),
+			    ALL('Diagnosis')
+			)
+		formatString: 0
+		lineageTag: 6b81f337-7ee7-4a33-9726-7fed4a0658ca
+
+	measure 'Total LOS Days (All Groups)' =
+			
+			VAR SelectedGroup = SELECTEDVALUE('Group List'[group names])
+			RETURN
+			CALCULATE(
+			    [Total LOS Days],
+			    TREATAS({SelectedGroup}, 'Diagnosis'[group names]),
+			    ALL('Diagnosis')
+			)
+		formatString: 0
+		lineageTag: fcae6de2-f9b6-4dac-8b1e-46adcdfb6a69
+
+	measure 'Total Chapters' = COUNTROWS(ALL('Diagnosis'[chapter names]))
+		formatString: 0
+		lineageTag: c8fdcd3f-2826-4c70-8878-b9f07bf611e2
+
+	measure 'Total Groups' = COUNTROWS(ALL('Diagnosis'[group names]))
+		formatString: 0
+		lineageTag: cfe94785-9387-4d80-935b-0fc019ff9ed6
+
+	measure 'Chapter Rank Display' =
+			
+			"Rank " & [Chapter LOS Rank] & " of " & [Total Chapters] & " chapters"
+		lineageTag: 45aff8cc-b26e-48a5-b2c9-bfe254cfb052
+
+	measure 'Group Rank Display' =
+			
+			"Rank " & [Group LOS Rank] & " of " & [Total Groups] & " groups"
+		lineageTag: 9b1e8bf1-ba77-402c-a52d-edb93b0f72a0
+
 	column sex
 		dataType: string
 		lineageTag: 6864dc0b-1817-4b8d-9153-731cb6e365a4

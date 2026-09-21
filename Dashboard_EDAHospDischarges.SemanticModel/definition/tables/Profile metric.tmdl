@@ -1,0 +1,49 @@
+table 'Profile metric'
+	lineageTag: d607885f-9c25-4772-bb32-3150bf2cb78f
+
+	column 'Profile metric'
+		lineageTag: 7efe387f-ba52-4bd7-a718-9b5aa5fd9d70
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Profile metric Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Profile metric Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Profile metric Fields'
+		isHidden
+		lineageTag: 1b5b5314-3a9d-40be-b9dd-71b8f91dde23
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Profile metric Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Profile metric Order'
+		isHidden
+		formatString: 0
+		lineageTag: 44810444-a71e-450f-b8bc-cc2b417aa33a
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Profile metric' = calculated
+		mode: import
+		source =
+				{
+				    ("Total Discharges", NAMEOF('Fact_Discharges'[Total Discharges]), 0),
+				    ("Median", NAMEOF('Fact_Discharges'[Median]), 1),
+				    ("Mortality Rate", NAMEOF('Fact_Discharges'[Mortality Rate]), 2)
+				}
+
+	annotation PBI_Id = 773d4ea18f5944a3816d5632a142dc78
+

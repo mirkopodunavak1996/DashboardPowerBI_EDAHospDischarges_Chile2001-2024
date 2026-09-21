@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "b787b4fb99c3107ba610",
+  "position": {
+    "x": 1013.7282063529974,
+    "y": 640.76427036064013,
+    "z": 8004,
+    "height": 79.484117506567955,
+    "width": 266.57750179125867,
+    "tabOrder": 8004
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Note: Hospital-name data is only available through 2020 and Hospital-type is unavailable only for year 2023. This chart reflects discharges from that period only.",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
