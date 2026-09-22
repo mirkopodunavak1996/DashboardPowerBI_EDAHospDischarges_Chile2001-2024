@@ -70,5 +70,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "45a1f070ccec9943ab60",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Hospital"
+              }
+            },
+            "Property": "healthcare facility name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

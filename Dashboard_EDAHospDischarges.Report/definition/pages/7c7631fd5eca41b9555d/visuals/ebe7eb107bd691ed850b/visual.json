@@ -23,6 +23,22 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
+                  "Property": "sex"
+                }
+              },
+              "queryRef": "Fact_Discharges.sex",
+              "nativeQueryRef": "sex",
+              "active": false,
+              "displayName": "sex"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
                   "Property": "health insurance"
                 }
               },
@@ -45,7 +61,7 @@
                 }
               },
               "index": 0,
-              "length": 1
+              "length": 2
             }
           ]
         },
@@ -98,5 +114,56 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2f43df870149e7601600",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "health insurance"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ff03f6810ec6e84db8ed",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "discharge condition"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d479c0940701acc602e6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "sex"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

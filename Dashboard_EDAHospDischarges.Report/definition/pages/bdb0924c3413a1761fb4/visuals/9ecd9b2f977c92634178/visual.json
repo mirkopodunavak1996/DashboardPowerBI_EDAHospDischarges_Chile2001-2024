@@ -3,9 +3,9 @@
   "name": "9ecd9b2f977c92634178",
   "position": {
     "x": 0,
-    "y": 187.09338428469073,
+    "y": 186.62155144977305,
     "z": 5000,
-    "height": 119.38290423625187,
+    "height": 122.12733881639559,
     "width": 576.33126183018146,
     "tabOrder": 5000
   },
@@ -204,5 +204,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f426f3a12d12b9091021",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "18b5c0a74233a370a0b0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "P25"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4ab442fe53856a69700d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "Median"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3641420f83d925e5ad9d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "P75"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

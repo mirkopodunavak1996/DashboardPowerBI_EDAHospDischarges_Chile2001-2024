@@ -1,0 +1,24 @@
+table 'Source Category'
+	lineageTag: ff8bba2d-f0ec-45ca-8ffe-115bf3fc3d7a
+
+	column Source
+		lineageTag: 16d28624-0361-44eb-9ed7-40262af9f565
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Source]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Source Category' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "Source", STRING,
+				    {
+				        {"Selected Hospital"},
+				        {"National (Same Type)"}
+				    }
+				)
+
+	annotation PBI_Id = 1cc3c66ac32143bab9f52ecfedb54df4
+

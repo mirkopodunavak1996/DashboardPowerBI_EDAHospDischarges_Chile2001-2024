@@ -1,0 +1,151 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "c2de4e7129160e6a8d52",
+  "position": {
+    "x": 38.422084122012095,
+    "y": 518.69813564716333,
+    "z": 10001,
+    "height": 185.24933415970119,
+    "width": 450.08727114357026,
+    "tabOrder": 10001
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Percentile Category"
+                    }
+                  },
+                  "Property": "Percentile"
+                }
+              },
+              "queryRef": "Percentile Category.Percentile",
+              "nativeQueryRef": "Percentile",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Source Category"
+                    }
+                  },
+                  "Property": "Source"
+                }
+              },
+              "queryRef": "Source Category.Source",
+              "nativeQueryRef": "Source"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "LOS Benchmark Value"
+                }
+              },
+              "queryRef": "Fact_Discharges.LOS Benchmark Value",
+              "nativeQueryRef": "LOS Benchmark Value"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Percentile Category"
+                  }
+                },
+                "Property": "Percentile"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Source Category"
+                  }
+                },
+                "Property": "Source"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "04da0d12322960479db3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Percentile Category"
+              }
+            },
+            "Property": "Percentile"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dff8ffdfea0c071335cb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Source Category"
+              }
+            },
+            "Property": "Source"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "52f10fe60c0a096dec98",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "LOS Benchmark Value"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

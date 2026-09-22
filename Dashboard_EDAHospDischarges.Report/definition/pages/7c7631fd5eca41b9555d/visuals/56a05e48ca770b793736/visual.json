@@ -30,9 +30,10 @@
               "nativeQueryRef": "year",
               "active": true
             }
-          ]
+          ],
+          "showAll": true
         },
-        "Y2": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -61,6 +62,20 @@
               },
               "queryRef": "Fact_Discharges.% Public Discharges",
               "nativeQueryRef": "% Public Discharges"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "% Unknown Discharges"
+                }
+              },
+              "queryRef": "Fact_Discharges.% Unknown Discharges",
+              "nativeQueryRef": "% Unknown Discharges"
             }
           ]
         }
@@ -85,5 +100,65 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ddf2b8d94002d5890051",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7c2c83ce3d2201d261e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "% Private Discharges"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2ca187768314d7c8554e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "% Public Discharges"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fe4f3f1a48cb62c5cea6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "% Unknown Discharges"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

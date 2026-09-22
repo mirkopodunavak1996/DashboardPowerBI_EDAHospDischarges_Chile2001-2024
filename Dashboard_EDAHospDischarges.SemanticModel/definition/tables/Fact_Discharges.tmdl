@@ -131,28 +131,35 @@ table Fact_Discharges
 			VAR TotalAll =
 			    CALCULATE(COUNTROWS('Fact_Discharges'), REMOVEFILTERS('Fact_Discharges'[healthcare facility type]))
 			VAR PublicCount =
-			    CALCULATE(
-			        COUNTROWS('Fact_Discharges'),
-			        REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
-			        'Fact_Discharges'[healthcare facility type] = "Public"
+			    COALESCE(
+			        CALCULATE(
+			            COUNTROWS('Fact_Discharges'),
+			            REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
+			            'Fact_Discharges'[healthcare facility type] = "Public"
+			        ),
+			        0
 			    )
 			RETURN
-			    DIVIDE(PublicCount, TotalAll)
-		formatString: 0.00%;-0.00%;0.00%
+			    DIVIDE(PublicCount, TotalAll, 0)
 		lineageTag: 5351e2a9-d6f1-443b-8189-9c7e7cd98139
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '% Private Discharges' =
 			
 			VAR TotalAll =
 			    CALCULATE(COUNTROWS('Fact_Discharges'), REMOVEFILTERS('Fact_Discharges'[healthcare facility type]))
 			VAR PrivateCount =
-			    CALCULATE(
-			        COUNTROWS('Fact_Discharges'),
-			        REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
-			        'Fact_Discharges'[healthcare facility type] = "Private"
+			    COALESCE(
+			        CALCULATE(
+			            COUNTROWS('Fact_Discharges'),
+			            REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
+			            'Fact_Discharges'[healthcare facility type] = "Private"
+			        ),
+			        0
 			    )
 			RETURN
-			    DIVIDE(PrivateCount, TotalAll)
+			    DIVIDE(PrivateCount, TotalAll, 0)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 43c9ef2f-1564-4563-a27e-1a9920fb6612
 
@@ -241,6 +248,32 @@ table Fact_Discharges
 			
 			"Rank " & [Group LOS Rank] & " of " & [Total Groups] & " groups"
 		lineageTag: 9b1e8bf1-ba77-402c-a52d-edb93b0f72a0
+
+	measure '% Unknown Discharges' =
+			
+			DIVIDE(
+			    CALCULATE(COUNTROWS('Fact_Discharges'), 'Fact_Discharges'[healthcare facility type] = "Unknown"),
+			    COUNTROWS('Fact_Discharges')
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7c739c79-b681-4f9c-b066-1d7fde382681
+
+	measure 'LOS Benchmark Value' =
+			
+			VAR SelectedPercentile = SELECTEDVALUE('Percentile Category'[Percentile])
+			VAR SelectedSource = SELECTEDVALUE('Source Category'[Source])
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    SelectedSource = "Selected Hospital" && SelectedPercentile = "P25", [P25],
+			    SelectedSource = "Selected Hospital" && SelectedPercentile = "Median", [Median],
+			    SelectedSource = "Selected Hospital" && SelectedPercentile = "P75", [P75],
+			    SelectedSource = "National (Same Type)" && SelectedPercentile = "P25", [National P25 (Same Type)],
+			    SelectedSource = "National (Same Type)" && SelectedPercentile = "Median", [National Median (Same Type)],
+			    SelectedSource = "National (Same Type)" && SelectedPercentile = "P75", [National P75 (Same Type)]
+			)
+		formatString: 0
+		lineageTag: 361dbdd0-25f1-493f-8f6b-9432f967781f
 
 	column sex
 		dataType: string

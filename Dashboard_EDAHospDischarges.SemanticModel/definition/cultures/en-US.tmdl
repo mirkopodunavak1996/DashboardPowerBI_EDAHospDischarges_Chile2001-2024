@@ -46,6 +46,27 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "fact_discharges.total_discharges": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Discharges",
+			          "ConceptualProperty": "Total Discharges"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Total Discharges": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  }
 			}

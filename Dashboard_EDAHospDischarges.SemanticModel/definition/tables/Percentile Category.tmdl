@@ -1,0 +1,36 @@
+table 'Percentile Category'
+	lineageTag: 3b926f6a-4d3a-48c2-ac48-a2391e80d615
+
+	column Percentile
+		lineageTag: 28932e8f-744e-4b58-8669-85b66176a7d9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Percentile]
+		sortByColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		formatString: 0
+		lineageTag: 273e4b1a-c985-4d8a-9d13-f12091cb1b2a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Percentile Category' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "Percentile", STRING,
+				    "SortOrder", INTEGER,
+				    {
+				        {"P25", 1},
+				        {"Median", 2},
+				        {"P75", 3}
+				    }
+				)
+
+	annotation PBI_Id = 6bec224a70554264aae606f97591bbfa
+

@@ -38,24 +38,17 @@
       "data": [
         {
           "properties": {
-            "numericStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "2007D"
-                }
-              }
-            },
-            "numericEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "2020D"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
                   "Value": "'Between'"
+                }
+              }
+            },
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "2018D"
                 }
               }
             }
@@ -78,45 +71,21 @@
                 "Where": [
                   {
                     "Condition": {
-                      "And": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
                         "Left": {
-                          "Comparison": {
-                            "ComparisonKind": 2,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "f"
-                                  }
-                                },
-                                "Property": "year"
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "f"
                               }
                             },
-                            "Right": {
-                              "Literal": {
-                                "Value": "2007D"
-                              }
-                            }
+                            "Property": "year"
                           }
                         },
                         "Right": {
-                          "Comparison": {
-                            "ComparisonKind": 4,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "f"
-                                  }
-                                },
-                                "Property": "year"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "2020D"
-                              }
-                            }
+                          "Literal": {
+                            "Value": "2018D"
                           }
                         }
                       }

@@ -23,28 +23,12 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "sex"
-                }
-              },
-              "queryRef": "Fact_Discharges.sex",
-              "nativeQueryRef": "sex",
-              "active": true,
-              "displayName": "sex"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Discharges"
-                    }
-                  },
                   "Property": "health insurance"
                 }
               },
               "queryRef": "Fact_Discharges.health insurance",
               "nativeQueryRef": "health insurance",
-              "active": false,
+              "active": true,
               "displayName": "health insurance"
             }
           ],
@@ -61,7 +45,7 @@
                 }
               },
               "index": 0,
-              "length": 2
+              "length": 1
             }
           ]
         },
@@ -114,5 +98,28 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3da1853fe130130a5a48",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "discharge condition"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -244,201 +244,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "Diagnosis",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "And": {
-                        "Left": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "chapter names"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'enfermedades del sistema genitourinario'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "Right": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "chapter names"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "group names"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedades del sistema genitourinario'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'enfermedad renal tubulointersticial'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Hierarchy": "Diagnosis Hierarchy"
-                                }
-                              },
-                              "Level": "chapter names"
-                            }
-                          },
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Hierarchy": "Diagnosis Hierarchy"
-                                }
-                              },
-                              "Level": "group names"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema genitourinario'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedades del sistema genitourinario'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'enfermedad renal tubulointersticial'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Property": "chapter names"
-                                }
-                              }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Diagnosis"
-                                    }
-                                  },
-                                  "Property": "group names"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "enfermedades del sistema genitourinario"
-                          },
-                          {
-                            "0": "enfermedades del sistema genitourinario",
-                            "1": "enfermedad renal tubulointersticial"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
             }
           }
         }
@@ -450,5 +255,66 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a8a8a375c25ce2d47dc5",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "chapter names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c6e6e6f20db700591800",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "group names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "752e22c8d71760946e86",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "primary diagnosis name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

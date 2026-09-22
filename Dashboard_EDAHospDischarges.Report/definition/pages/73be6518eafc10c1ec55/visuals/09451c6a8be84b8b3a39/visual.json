@@ -77,12 +77,12 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Mortality Rate"
+                  "Property": "Total Discharges"
                 }
               },
-              "queryRef": "Fact_Discharges.Mortality Rate",
-              "nativeQueryRef": "Mortality Rate",
-              "displayName": "Mortality Rate"
+              "queryRef": "Fact_Discharges.Total Discharges",
+              "nativeQueryRef": "Total Discharges",
+              "displayName": "Total Discharges"
             }
           ],
           "fieldParameters": [
@@ -113,7 +113,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Mortality Rate"
+                "Property": "Total Discharges"
               }
             },
             "direction": "Descending"

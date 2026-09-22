@@ -20,6 +20,8 @@ ref table 'Patient profile dimension'
 ref table 'Profile metric'
 ref table 'Chapter List'
 ref table 'Group List'
+ref table 'Percentile Category'
+ref table 'Source Category'
 
 ref cultureInfo en-US
 
