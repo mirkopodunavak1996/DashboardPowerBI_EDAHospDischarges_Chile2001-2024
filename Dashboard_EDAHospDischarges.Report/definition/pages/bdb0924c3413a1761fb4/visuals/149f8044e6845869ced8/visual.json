@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "149f8044e6845869ced8",
+  "position": {
+    "x": 935,
+    "y": 636.25,
+    "z": 12000,
+    "height": 83.75,
+    "width": 345,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Note: Hospital-name data is only available until 2020 and Hospital-type is unavailable only for year 2023. Related charts reflects discharges considering these limitations."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

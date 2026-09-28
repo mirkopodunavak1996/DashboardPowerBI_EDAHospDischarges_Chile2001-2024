@@ -1,0 +1,44 @@
+{
+  "name": "Hospital Discharges",
+  "dataColors": [
+    "#1F5A7A",
+    "#E08A3C",
+    "#2E8B6E",
+    "#7FB7D6",
+    "#B5533C",
+    "#8C6BB1",
+    "#9AD1B9",
+    "#A0A0A0"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#1F2933",
+  "tableAccent": "#1F5A7A",
+  "good": "#2E8B6E",
+  "neutral": "#E0A93C",
+  "bad": "#B5533C",
+  "maximum": "#1F5A7A",
+  "center": "#7FB7D6",
+  "minimum": "#DCE9F2",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1F5A7A"
+    },
+    "title": {
+      "fontSize": 14,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1F2933"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1F2933"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#52606D"
+    }
+  }
+}

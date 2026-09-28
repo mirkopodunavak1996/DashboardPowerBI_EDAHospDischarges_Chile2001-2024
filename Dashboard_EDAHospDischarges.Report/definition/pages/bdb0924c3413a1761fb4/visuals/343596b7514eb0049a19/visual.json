@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "343596b7514eb0049a19",
   "position": {
-    "x": 563.72581800812043,
-    "y": 374.18676856938146,
-    "z": 7000,
-    "height": 345.79875709810887,
-    "width": 344.42653980803703,
-    "tabOrder": 7000
+    "x": 507.5,
+    "y": 492.5,
+    "z": 6000,
+    "height": 227.5,
+    "width": 427.5,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "pieChart",
@@ -75,42 +75,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a32c992a096c8e00b4d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "age"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cfaf81320c00e3513ad2",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "sex"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

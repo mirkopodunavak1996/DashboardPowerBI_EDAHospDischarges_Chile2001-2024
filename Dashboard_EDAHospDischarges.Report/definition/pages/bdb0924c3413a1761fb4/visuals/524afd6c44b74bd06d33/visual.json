@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "524afd6c44b74bd06d33",
   "position": {
-    "x": 0,
-    "y": 28.125149271554815,
-    "z": 10000,
-    "height": 91.938558434814652,
-    "width": 299.1433692356656,
-    "tabOrder": 10000
+    "x": 935.46692142345353,
+    "y": 0,
+    "z": 9000,
+    "height": 86.821112968712683,
+    "width": 344.83878672080249,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -38,17 +38,24 @@
       "data": [
         {
           "properties": {
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "2004D"
+                }
+              }
+            },
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "2010D"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
                   "Value": "'Between'"
-                }
-              }
-            },
-            "numericStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "2018D"
                 }
               }
             }
@@ -71,27 +78,91 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 2,
+                      "And": {
                         "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "f"
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "f"
+                                  }
+                                },
+                                "Property": "year"
                               }
                             },
-                            "Property": "year"
+                            "Right": {
+                              "Literal": {
+                                "Value": "2004D"
+                              }
+                            }
                           }
                         },
                         "Right": {
-                          "Literal": {
-                            "Value": "2018D"
+                          "Comparison": {
+                            "ComparisonKind": 4,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "f"
+                                  }
+                                },
+                                "Property": "year"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "2010D"
+                              }
+                            }
                           }
                         }
                       }
                     }
                   }
                 ]
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Year'"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "numericInputStyle": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
               }
             }
           }

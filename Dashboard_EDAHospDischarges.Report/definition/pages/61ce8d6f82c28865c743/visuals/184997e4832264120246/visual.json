@@ -1,0 +1,33 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "184997e4832264120246",
+  "position": {
+    "x": 980.71172677334607,
+    "y": 672.55791736326728,
+    "z": 6001,
+    "height": 47.690470503940773,
+    "width": 299.59398137090994,
+    "tabOrder": 6001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Note 1: Hospital-type and related visuals are unavailable only for year 2023."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

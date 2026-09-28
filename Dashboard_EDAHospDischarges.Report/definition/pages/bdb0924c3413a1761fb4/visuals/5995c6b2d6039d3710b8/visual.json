@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5995c6b2d6039d3710b8",
   "position": {
-    "x": 908.56460472892286,
-    "y": 359.51277764509194,
-    "z": 9000,
-    "height": 94.158108430857425,
+    "x": 931.79842369238122,
+    "y": 304.48531167900643,
+    "z": 8000,
+    "height": 101.49510389300215,
     "width": 348.50728445187485,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''Fact_Discharges''[health insurance]'"
+                                "Value": "'''Fact_Discharges''[sex]'"
                               }
                             }
                           ]
@@ -109,7 +109,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''Fact_Discharges''[health insurance]'"
+                                      "Value": "'''Fact_Discharges''[sex]'"
                                     }
                                   }
                                 ]
@@ -133,7 +133,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "health insurance"
+                            "0": "sex"
                           }
                         ]
                       }
@@ -144,26 +144,28 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Patient Profile Dimension'"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16.3D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a0d151795008235cee31",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Patient profile dimension"
-              }
-            },
-            "Property": "Patient profile dimension"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

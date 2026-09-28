@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e32ecc8edd06193e0020",
   "position": {
-    "x": 917.12443276809176,
-    "y": 450.00238834487703,
-    "z": 8000,
-    "height": 253.8601986632942,
-    "width": 304.63223839595304,
-    "tabOrder": 8000
+    "x": 935,
+    "y": 406.25,
+    "z": 7000,
+    "height": 230,
+    "width": 345,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pieChart",
@@ -23,13 +23,13 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "health insurance"
+                  "Property": "sex"
                 }
               },
-              "queryRef": "Fact_Discharges.health insurance",
-              "nativeQueryRef": "health insurance",
+              "queryRef": "Fact_Discharges.sex",
+              "nativeQueryRef": "sex",
               "active": true,
-              "displayName": "health insurance"
+              "displayName": "sex"
             }
           ],
           "fieldParameters": [
@@ -98,28 +98,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3da1853fe130130a5a48",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "discharge condition"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

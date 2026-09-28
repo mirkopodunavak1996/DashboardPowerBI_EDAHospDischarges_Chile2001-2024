@@ -1,0 +1,545 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "61945d5c7a0801054920",
+  "position": {
+    "x": 985.60305708144256,
+    "y": 123.50609027943635,
+    "z": 14001,
+    "height": 67.255791736326728,
+    "width": 294.70265106281346,
+    "tabOrder": 14001
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Diagnosis"
+                        }
+                      },
+                      "Hierarchy": "Diagnosis Hierarchy"
+                    }
+                  },
+                  "Level": "chapter names"
+                }
+              },
+              "queryRef": "Diagnosis.Diagnosis Hierarchy.chapter names",
+              "nativeQueryRef": "Diagnosis Hierarchy chapter names",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Diagnosis"
+                        }
+                      },
+                      "Hierarchy": "Diagnosis Hierarchy"
+                    }
+                  },
+                  "Level": "group names"
+                }
+              },
+              "queryRef": "Diagnosis.Diagnosis Hierarchy.group names",
+              "nativeQueryRef": "Diagnosis Hierarchy group names",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Diagnosis"
+                        }
+                      },
+                      "Hierarchy": "Diagnosis Hierarchy"
+                    }
+                  },
+                  "Level": "primary diagnosis name"
+                }
+              },
+              "queryRef": "Diagnosis.Diagnosis Hierarchy.primary diagnosis name",
+              "nativeQueryRef": "Diagnosis Hierarchy primary diagnosis name",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Diagnosis.Diagnosis Hierarchy.chapter names"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Diagnosis"
+                    }
+                  },
+                  "Property": "chapter names"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Diagnosis.Diagnosis Hierarchy.group names"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Diagnosis"
+                    }
+                  },
+                  "Property": "group names"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Diagnosis.Diagnosis Hierarchy.primary diagnosis name"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'enfermedades de la piel y del tejido subcutáneo'"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'trastornos flictenulares'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'ciertas enfermedades infecciosas y parasitarias'"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'hepatitis viral'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'anemias nutricionales'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'tumores [neoplasias]'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'ciertas afecciones originadas en el período perinatal'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'enfermedades del sistema genitourinario'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "d",
+                    "Entity": "Diagnosis",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "And": {
+                        "Left": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "chapter names"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "Right": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "d"
+                                        }
+                                      },
+                                      "Property": "chapter names"
+                                    }
+                                  },
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "d"
+                                        }
+                                      },
+                                      "Property": "group names"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                      }
+                                    },
+                                    {
+                                      "Literal": {
+                                        "Value": "'trastornos del sistema digestivo del feto y del recién nacido'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "filterExpressionMetadata": {
+                        "expressions": [
+                          {
+                            "HierarchyLevel": {
+                              "Expression": {
+                                "Hierarchy": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Hierarchy": "Diagnosis Hierarchy"
+                                }
+                              },
+                              "Level": "chapter names"
+                            }
+                          },
+                          {
+                            "HierarchyLevel": {
+                              "Expression": {
+                                "Hierarchy": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Hierarchy": "Diagnosis Hierarchy"
+                                }
+                              },
+                              "Level": "group names"
+                            }
+                          }
+                        ],
+                        "decomposedIdentities": {
+                          "values": [
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "1": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'trastornos del sistema digestivo del feto y del recién nacido'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          ],
+                          "columns": [
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Property": "chapter names"
+                                }
+                              }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Property": "group names"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "valueMap": [
+                          {
+                            "0": "ciertas afecciones originadas en el período perinatal"
+                          },
+                          {
+                            "0": "ciertas afecciones originadas en el período perinatal",
+                            "1": "trastornos del sistema digestivo del feto y del recién nacido"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16.3D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Diagnosis by ICD-10 level'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "chapter names",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ac9bbaba00ec6c0acb87",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "chapter names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0d9c48cf11d1d80904ab",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "group names"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c7ab2a618e9cc00696d8",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Diagnosis"
+                  }
+                },
+                "Hierarchy": "Diagnosis Hierarchy"
+              }
+            },
+            "Level": "primary diagnosis name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

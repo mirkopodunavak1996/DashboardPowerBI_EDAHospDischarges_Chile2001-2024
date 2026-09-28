@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e90cf1b22ee9a016646e",
   "position": {
-    "x": 935.85219182900892,
-    "y": 632.59217072312777,
+    "x": 639.541437783616,
+    "y": 637.0957726295677,
     "z": 10001,
-    "height": 83.7052546943835,
-    "width": 334.821018777534,
+    "height": 83.152615237640319,
+    "width": 640.76427036064013,
     "tabOrder": 10001
   },
   "visual": {
@@ -19,7 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "Note: Hospital-name data is only available through 2020 and Hospital-type is unavailable only for year 2023. This chart reflects discharges from that period only."
+                    "value": "Note 1: Hospital-name data is only available until 2020 and Hospital-type is unavailable only for year 2023. Related charts reflects discharges from that period only."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Note 2: Hospital-type data (public/private) is unavailable for 2023 and is recorded as 'Unknown' for that year only"
                   }
                 ]
               }

@@ -141,9 +141,8 @@ table Fact_Discharges
 			    )
 			RETURN
 			    DIVIDE(PublicCount, TotalAll, 0)
+		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 5351e2a9-d6f1-443b-8189-9c7e7cd98139
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '% Private Discharges' =
 			
@@ -274,6 +273,23 @@ table Fact_Discharges
 			)
 		formatString: 0
 		lineageTag: 361dbdd0-25f1-493f-8f6b-9432f967781f
+
+	measure 'LOS Type Comparison Value' =
+			
+			VAR SelectedPercentile = SELECTEDVALUE('Percentile Category'[Percentile])
+			VAR SelectedType = SELECTEDVALUE('Type Category'[Hospital Type Source])
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    SelectedType = "Public" && SelectedPercentile = "P25", [Public LOS P25],
+			    SelectedType = "Public" && SelectedPercentile = "Median", [Public Median LOS],
+			    SelectedType = "Public" && SelectedPercentile = "P75", [Public LOS P75],
+			    SelectedType = "Private" && SelectedPercentile = "P25", [Private LOS P25],
+			    SelectedType = "Private" && SelectedPercentile = "Median", [Private Median LOS],
+			    SelectedType = "Private" && SelectedPercentile = "P75", [Private LOS P75]
+			)
+		formatString: 0
+		lineageTag: ecddb9c1-f6e8-488a-af0a-05d7eda50bd1
 
 	column sex
 		dataType: string

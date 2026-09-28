@@ -1,0 +1,24 @@
+table 'Type Category'
+	lineageTag: 7662150d-edc8-4fc3-9cb8-1c3b03452ca2
+
+	column 'Hospital Type Source'
+		lineageTag: b5c8b7d2-4ae9-4d0b-97c3-a251fe409dc4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Hospital Type Source]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Type Category' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "Hospital Type Source", STRING,
+				    {
+				        {"Public"},
+				        {"Private"}
+				    }
+				)
+
+	annotation PBI_Id = e5de44c096e348bda5af8d3a31128fdc
+

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "d7c85f4356d78d0e8d55",
+  "position": {
+    "x": 0,
+    "y": 121.06042512538811,
+    "z": 6002,
+    "height": 299.59398137090994,
+    "width": 509.92118461905903,
+    "tabOrder": 6002
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Percentile Category"
+                    }
+                  },
+                  "Property": "Percentile"
+                }
+              },
+              "queryRef": "Percentile Category.Percentile",
+              "nativeQueryRef": "Percentile",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Type Category"
+                    }
+                  },
+                  "Property": "Hospital Type Source"
+                }
+              },
+              "queryRef": "Type Category.Hospital Type Source",
+              "nativeQueryRef": "Hospital Type Source"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Discharges"
+                    }
+                  },
+                  "Property": "LOS Type Comparison Value"
+                }
+              },
+              "queryRef": "Fact_Discharges.LOS Type Comparison Value",
+              "nativeQueryRef": "LOS Type Comparison Value"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

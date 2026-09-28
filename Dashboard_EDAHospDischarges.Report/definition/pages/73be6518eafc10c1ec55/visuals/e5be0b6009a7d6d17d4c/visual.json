@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e5be0b6009a7d6d17d4c",
   "position": {
-    "x": 709.24289467399092,
-    "y": 538.04633389061382,
-    "z": 8006,
-    "height": 150,
-    "width": 230,
-    "tabOrder": 8006
+    "x": 351.25,
+    "y": 230,
+    "z": 14000,
+    "height": 258.75,
+    "width": 331.25,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -174,20 +174,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "be7e48beb69401595410",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "Total LOS Days (All Groups)"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

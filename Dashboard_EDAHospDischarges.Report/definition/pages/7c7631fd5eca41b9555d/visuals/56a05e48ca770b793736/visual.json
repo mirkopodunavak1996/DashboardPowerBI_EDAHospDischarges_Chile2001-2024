@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "56a05e48ca770b793736",
   "position": {
-    "x": 721.78629457779869,
-    "y": 122.12733881639559,
+    "x": 639.541437783616,
+    "y": 311.82230714115121,
     "z": 8000,
-    "height": 205.43587294005255,
-    "width": 533.15500358251734,
+    "height": 325.27346548841655,
+    "width": 640.76427036064013,
     "tabOrder": 8000
   },
   "visual": {
@@ -100,65 +100,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ddf2b8d94002d5890051",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7c2c83ce3d2201d261e0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "% Private Discharges"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2ca187768314d7c8554e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "% Public Discharges"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fe4f3f1a48cb62c5cea6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "% Unknown Discharges"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

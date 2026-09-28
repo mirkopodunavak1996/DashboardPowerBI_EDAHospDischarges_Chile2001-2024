@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "ebe7eb107bd691ed850b",
   "position": {
-    "x": 334.821018777534,
-    "y": 462.437226754217,
+    "x": 0,
+    "y": 311.82230714115121,
     "z": 4000,
-    "height": 253.8601986632942,
-    "width": 304.63223839595304,
+    "height": 408.42608072605685,
+    "width": 325.27346548841655,
     "tabOrder": 4000
   },
   "visual": {
@@ -28,24 +28,8 @@
               },
               "queryRef": "Fact_Discharges.sex",
               "nativeQueryRef": "sex",
-              "active": false,
-              "displayName": "sex"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fact_Discharges"
-                    }
-                  },
-                  "Property": "health insurance"
-                }
-              },
-              "queryRef": "Fact_Discharges.health insurance",
-              "nativeQueryRef": "health insurance",
               "active": true,
-              "displayName": "health insurance"
+              "displayName": "sex"
             }
           ],
           "fieldParameters": [
@@ -61,7 +45,7 @@
                 }
               },
               "index": 0,
-              "length": 2
+              "length": 1
             }
           ]
         },
@@ -118,21 +102,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2f43df870149e7601600",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "health insurance"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ff03f6810ec6e84db8ed",
+        "name": "0e860fbd27ea160aa869",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -151,7 +121,7 @@
         "type": "Advanced"
       },
       {
-        "name": "d479c0940701acc602e6",
+        "name": "4b598408b440e0083600",
         "field": {
           "Column": {
             "Expression": {

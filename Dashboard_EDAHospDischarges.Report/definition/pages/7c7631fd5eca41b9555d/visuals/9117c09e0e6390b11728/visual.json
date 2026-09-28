@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9117c09e0e6390b11728",
   "position": {
-    "x": 35.677649541868377,
-    "y": 148.19946732776094,
+    "x": 0,
+    "y": 91.25,
     "z": 7000,
-    "height": 211.32146267106654,
-    "width": 299.1433692356656,
+    "height": 105.16360162407452,
+    "width": 212.77286840219728,
     "tabOrder": 7000
   },
   "visual": {
@@ -52,5 +52,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2b515fa2de87ca851074",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Discharges"
+              }
+            },
+            "Property": "% Public Discharges"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

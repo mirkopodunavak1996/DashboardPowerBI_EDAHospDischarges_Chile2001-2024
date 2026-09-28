@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "09451c6a8be84b8b3a39",
   "position": {
-    "x": 622.42178170527825,
-    "y": 294.70265106281346,
-    "z": 8001,
-    "height": 210.32720324814903,
-    "width": 363.18127537616431,
-    "tabOrder": 8001
+    "x": 350.9529496059231,
+    "y": 585.73680439455461,
+    "z": 9000,
+    "height": 134.51158347265346,
+    "width": 634.65010747551946,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -77,12 +77,12 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Total Discharges"
+                  "Property": "Median"
                 }
               },
-              "queryRef": "Fact_Discharges.Total Discharges",
-              "nativeQueryRef": "Total Discharges",
-              "displayName": "Total Discharges"
+              "queryRef": "Fact_Discharges.Median",
+              "nativeQueryRef": "Median",
+              "displayName": "Median"
             }
           ],
           "fieldParameters": [
@@ -113,7 +113,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Total Discharges"
+                "Property": "Median"
               }
             },
             "direction": "Descending"

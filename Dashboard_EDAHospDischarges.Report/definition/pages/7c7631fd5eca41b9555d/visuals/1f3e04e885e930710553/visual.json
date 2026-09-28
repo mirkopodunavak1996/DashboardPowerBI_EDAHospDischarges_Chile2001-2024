@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "1f3e04e885e930710553",
   "position": {
-    "x": 704.35156436589443,
-    "y": 364.40410795318843,
+    "x": 425.54573680439455,
+    "y": 108.83209935514688,
     "z": 9000,
-    "height": 130.84308574158109,
-    "width": 566.17148316216867,
+    "height": 202.99020778600431,
+    "width": 555.16598996895152,
     "tabOrder": 9000
   },
   "visual": {
@@ -268,25 +268,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "a78e49bd0a68dac399d9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "sex"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

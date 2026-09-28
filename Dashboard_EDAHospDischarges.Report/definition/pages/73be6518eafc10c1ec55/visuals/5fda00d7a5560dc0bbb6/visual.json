@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5fda00d7a5560dc0bbb6",
   "position": {
-    "x": 1051.1184441950452,
-    "y": 146.82725003768908,
+    "x": 0,
+    "y": 103.75,
     "z": 2000,
-    "height": 150.40840697396703,
-    "width": 165.08239789825652,
+    "height": 125,
+    "width": 351.25,
     "tabOrder": 2000
   },
   "visual": {
@@ -51,24 +51,24 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "30fc607ab9b0be8122d3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "28D"
+                }
               }
-            },
-            "Property": "Total LOS Days"
+            }
+          },
+          "selector": {
+            "id": "default"
           }
-        },
-        "type": "Advanced"
-      }
-    ]
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
   }
 }

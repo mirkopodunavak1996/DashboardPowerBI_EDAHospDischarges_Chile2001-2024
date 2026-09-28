@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c202f6812907a9d09c4c",
   "position": {
-    "x": 463.45354669214237,
-    "y": 22.0109863864342,
+    "x": 935.46692142345353,
+    "y": 114.9462622402675,
     "z": 3000,
-    "height": 171.19656078337712,
-    "width": 353.39861475997134,
+    "height": 74.592787198471456,
+    "width": 344.83878672080249,
     "tabOrder": 3000
   },
   "visual": {
@@ -41,7 +41,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -67,26 +67,28 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16.3D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Healthcare Facility Name'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "45a1f070ccec9943ab60",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Hospital"
-              }
-            },
-            "Property": "healthcare facility name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c2de4e7129160e6a8d52",
   "position": {
-    "x": 38.422084122012095,
-    "y": 518.69813564716333,
-    "z": 10001,
-    "height": 185.24933415970119,
-    "width": 450.08727114357026,
-    "tabOrder": 10001
+    "x": 507.5,
+    "y": 115,
+    "z": 10000,
+    "height": 378.75,
+    "width": 420,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Source Category.Source",
-              "nativeQueryRef": "Source"
+              "nativeQueryRef": "Facility Type",
+              "displayName": "Facility Type"
             }
           ]
         },
@@ -100,52 +101,28 @@
         ]
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'National Benchmark vs Selected Hospital Length Of Stay'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16.3D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "04da0d12322960479db3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Percentile Category"
-              }
-            },
-            "Property": "Percentile"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dff8ffdfea0c071335cb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Source Category"
-              }
-            },
-            "Property": "Source"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "52f10fe60c0a096dec98",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "LOS Benchmark Value"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
