@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 10004,
-    "height": 102.71793647002627,
+    "z": 11000,
+    "height": 92.935275853833289,
     "width": 926.90709338428474,
-    "tabOrder": 10004
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "textbox",
@@ -31,10 +31,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "My facility's discharges, length of stay and patient profile",
+                    "value": "Market Access, Patient Profile and Hospital Distribution",
                     "textStyle": {
-                      "fontSize": "18pt",
-                      "color": "#999999"
+                      "fontSize": "18pt"
                     }
                   }
                 ]

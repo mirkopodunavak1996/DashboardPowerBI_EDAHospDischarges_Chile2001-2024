@@ -3,11 +3,11 @@
   "name": "9117c09e0e6390b11728",
   "position": {
     "x": 0,
-    "y": 91.25,
-    "z": 7000,
-    "height": 105.16360162407452,
+    "y": 107.60926677812276,
+    "z": 5000,
+    "height": 133.28875089562933,
     "width": 212.77286840219728,
-    "tabOrder": 7000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -51,24 +51,24 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2b515fa2de87ca851074",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "34D"
+                }
               }
-            },
-            "Property": "% Public Discharges"
+            }
+          },
+          "selector": {
+            "id": "default"
           }
-        },
-        "type": "Advanced"
-      }
-    ]
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
   }
 }

@@ -23,13 +23,13 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "sex"
+                  "Property": "health insurance"
                 }
               },
-              "queryRef": "Fact_Discharges.sex",
-              "nativeQueryRef": "sex",
+              "queryRef": "Fact_Discharges.health insurance",
+              "nativeQueryRef": "Health Insurance",
               "active": true,
-              "displayName": "sex"
+              "displayName": "Health Insurance"
             }
           ],
           "fieldParameters": [
@@ -96,6 +96,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Count of Discharges by Selected Patient Profile Dimension'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

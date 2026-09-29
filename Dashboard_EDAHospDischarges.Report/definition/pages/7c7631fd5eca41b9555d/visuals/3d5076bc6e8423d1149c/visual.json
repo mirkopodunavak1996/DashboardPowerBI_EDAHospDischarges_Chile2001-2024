@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "3d5076bc6e8423d1149c",
   "position": {
-    "x": 325.27346548841655,
-    "y": 311.82230714115121,
-    "z": 3000,
-    "height": 408.42608072605685,
+    "x": 0,
+    "y": 338.72462383568188,
+    "z": 1000,
+    "height": 381.52376403152618,
     "width": 314.26797229519946,
-    "tabOrder": 3000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pieChart",
@@ -73,6 +73,21 @@
           }
         ]
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Count of Discharges by Age Group'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

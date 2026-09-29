@@ -4,5 +4,12 @@
   "displayName": "Pharma",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "56a05e48ca770b793736",
+      "target": "7279ca50cc8db80b3299",
+      "type": "DataFilter"
+    }
+  ]
 }

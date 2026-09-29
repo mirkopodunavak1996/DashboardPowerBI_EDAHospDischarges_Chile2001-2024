@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d796665d07b306d58d54",
   "position": {
-    "x": 0,
-    "y": 210,
-    "z": 5000,
-    "height": 101.25,
-    "width": 198.75,
-    "tabOrder": 5000
+    "x": 305.70814425603061,
+    "y": 308.15380941007885,
+    "z": 3000,
+    "height": 35.462144733699546,
+    "width": 341.17028898973012,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -51,6 +51,13 @@
       "general": [
         {
           "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
             "filter": {
               "filter": {
                 "Version": 2,
@@ -133,7 +140,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "sex"
+                            "0": "Sex"
                           }
                         ]
                       }

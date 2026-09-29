@@ -4,10 +4,10 @@
   "position": {
     "x": 682.34057797946025,
     "y": 229.892524480535,
-    "z": 13000,
+    "z": 11000,
     "height": 260.46333890613806,
     "width": 303.26247910198231,
-    "tabOrder": 13000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -70,6 +70,34 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS Days'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Chapter Names'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -78,6 +106,13 @@
               "expr": {
                 "Literal": {
                   "Value": "16.3D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total LOS Days (Top 5 Chapter Names)'"
                 }
               }
             }

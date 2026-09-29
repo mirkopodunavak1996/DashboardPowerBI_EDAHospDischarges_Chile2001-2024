@@ -38,24 +38,24 @@
       "data": [
         {
           "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Between'"
+                }
+              }
+            },
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "2004D"
+                  "Value": "2003D"
                 }
               }
             },
             "numericEnd": {
               "expr": {
                 "Literal": {
-                  "Value": "2010D"
-                }
-              }
-            },
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Between'"
+                  "Value": "2023D"
                 }
               }
             }
@@ -94,7 +94,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "2004D"
+                                "Value": "2003D"
                               }
                             }
                           }
@@ -114,7 +114,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "2010D"
+                                "Value": "2023D"
                               }
                             }
                           }

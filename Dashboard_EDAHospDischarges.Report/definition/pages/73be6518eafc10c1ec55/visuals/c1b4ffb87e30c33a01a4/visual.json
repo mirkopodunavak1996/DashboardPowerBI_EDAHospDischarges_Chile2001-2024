@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 391.30642464771915,
-    "z": 7000,
+    "z": 5000,
     "height": 157.74540243611179,
     "width": 350.9529496059231,
-    "tabOrder": 7000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -69,6 +69,36 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS (Days)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Median LOS by Year'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

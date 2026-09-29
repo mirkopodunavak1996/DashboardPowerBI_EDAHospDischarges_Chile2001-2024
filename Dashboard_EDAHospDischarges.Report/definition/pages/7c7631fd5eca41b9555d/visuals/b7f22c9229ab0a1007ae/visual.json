@@ -3,11 +3,11 @@
   "name": "b7f22c9229ab0a1007ae",
   "position": {
     "x": 978.26606161929783,
-    "y": 102.71793647002627,
-    "z": 2000,
-    "height": 94.158108430857425,
+    "y": 86.821112968712683,
+    "z": 0,
+    "height": 134.51158347265346,
     "width": 299.59398137090994,
-    "tabOrder": 2000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "slicer",
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Public'"
+                                "Value": "'Private'"
                               }
                             }
                           ]

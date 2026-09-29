@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 121.06042512538811,
-    "z": 6002,
+    "z": 5000,
     "height": 299.59398137090994,
     "width": 509.92118461905903,
-    "tabOrder": 6002
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -69,6 +69,49 @@
           ]
         }
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS (Days)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Hospital Type'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS Comparison — Distribution (Public vs Private)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

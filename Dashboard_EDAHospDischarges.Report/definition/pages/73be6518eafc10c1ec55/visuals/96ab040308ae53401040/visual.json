@@ -4,10 +4,10 @@
   "position": {
     "x": 1.2228325770241224,
     "y": 549.051827083831,
-    "z": 5000,
+    "z": 3000,
     "height": 171.19656078337712,
     "width": 349.730117028899,
-    "tabOrder": 5000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineChart",
@@ -69,6 +69,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Discharges by Year'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

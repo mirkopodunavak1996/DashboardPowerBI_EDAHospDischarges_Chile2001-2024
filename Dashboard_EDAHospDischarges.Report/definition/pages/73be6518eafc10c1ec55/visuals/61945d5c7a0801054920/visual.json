@@ -4,10 +4,10 @@
   "position": {
     "x": 985.60305708144256,
     "y": 123.50609027943635,
-    "z": 14001,
+    "z": 13000,
     "height": 67.255791736326728,
     "width": 294.70265106281346,
-    "tabOrder": 14001
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "slicer",
@@ -226,6 +226,28 @@
                 }
               ],
               "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'trastornos mentales y del comportamiento'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'trastornos del desarrollo psicológico'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
             }
           ]
         }
@@ -255,7 +277,7 @@
                 }
               }
             },
-            "filter": {
+            "selfFilter": {
               "filter": {
                 "Version": 2,
                 "From": [
@@ -268,72 +290,79 @@
                 "Where": [
                   {
                     "Condition": {
-                      "And": {
+                      "Or": {
                         "Left": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "chapter names"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
+                          "Or": {
+                            "Left": {
+                              "Contains": {
+                                "Left": {
+                                  "HierarchyLevel": {
+                                    "Expression": {
+                                      "Hierarchy": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "d"
+                                          }
+                                        },
+                                        "Hierarchy": "Diagnosis Hierarchy"
+                                      }
+                                    },
+                                    "Level": "chapter names"
+                                  }
+                                },
+                                "Right": {
                                   "Literal": {
-                                    "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                    "Value": "'autismo'"
                                   }
                                 }
-                              ]
-                            ]
+                              }
+                            },
+                            "Right": {
+                              "Contains": {
+                                "Left": {
+                                  "HierarchyLevel": {
+                                    "Expression": {
+                                      "Hierarchy": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "d"
+                                          }
+                                        },
+                                        "Hierarchy": "Diagnosis Hierarchy"
+                                      }
+                                    },
+                                    "Level": "group names"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'autismo'"
+                                  }
+                                }
+                              }
+                            }
                           }
                         },
                         "Right": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "chapter names"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "group names"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'ciertas afecciones originadas en el período perinatal'"
+                          "Contains": {
+                            "Left": {
+                              "HierarchyLevel": {
+                                "Expression": {
+                                  "Hierarchy": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "d"
                                       }
                                     },
-                                    {
-                                      "Literal": {
-                                        "Value": "'trastornos del sistema digestivo del feto y del recién nacido'"
-                                      }
-                                    }
-                                  ]
-                                ]
+                                    "Hierarchy": "Diagnosis Hierarchy"
+                                  }
+                                },
+                                "Level": "primary diagnosis name"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "'autismo'"
                               }
                             }
                           }
@@ -341,6 +370,7 @@
                       }
                     },
                     "Annotations": {
+                      "PowerBI.MParameterBehavior": 1,
                       "filterExpressionMetadata": {
                         "expressions": [
                           {
@@ -372,6 +402,21 @@
                               },
                               "Level": "group names"
                             }
+                          },
+                          {
+                            "HierarchyLevel": {
+                              "Expression": {
+                                "Hierarchy": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Hierarchy": "Diagnosis Hierarchy"
+                                }
+                              },
+                              "Level": "primary diagnosis name"
+                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -381,18 +426,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                      "Value": "'enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad'"
                                     }
                                   }
                                 ]
@@ -401,7 +435,16 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "'trastornos del sistema digestivo del feto y del recién nacido'"
+                                      "Value": "'defectos de la coagulación, púrpura y otras afecciones hemorrágicas'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "2": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'coagulacion intravascular diseminada (sindrome de desfibrinacion)'"
                                     }
                                   }
                                 ]
@@ -432,17 +475,98 @@
                                   "Property": "group names"
                                 }
                               }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Property": "primary diagnosis name"
+                                }
+                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "ciertas afecciones originadas en el período perinatal"
+                            "0": "enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad",
+                            "1": "defectos de la coagulación, púrpura y otras afecciones hemorrágicas",
+                            "2": "coagulacion intravascular diseminada (sindrome de desfibrinacion)"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "d",
+                    "Entity": "Diagnosis",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "chapter names"
+                            }
                           },
                           {
-                            "0": "ciertas afecciones originadas en el período perinatal",
-                            "1": "trastornos del sistema digestivo del feto y del recién nacido"
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "group names"
+                            }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "primary diagnosis name"
+                            }
                           }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'defectos de la coagulación, púrpura y otras afecciones hemorrágicas'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'coagulacion intravascular diseminada (sindrome de desfibrinacion)'"
+                              }
+                            }
+                          ]
                         ]
                       }
                     }
@@ -480,66 +604,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ac9bbaba00ec6c0acb87",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Hierarchy": "Diagnosis Hierarchy"
-              }
-            },
-            "Level": "chapter names"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0d9c48cf11d1d80904ab",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Hierarchy": "Diagnosis Hierarchy"
-              }
-            },
-            "Level": "group names"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c7ab2a618e9cc00696d8",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Diagnosis"
-                  }
-                },
-                "Hierarchy": "Diagnosis Hierarchy"
-              }
-            },
-            "Level": "primary diagnosis name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

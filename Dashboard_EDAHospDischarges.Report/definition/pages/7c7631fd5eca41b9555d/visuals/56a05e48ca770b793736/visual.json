@@ -3,11 +3,11 @@
   "name": "56a05e48ca770b793736",
   "position": {
     "x": 639.541437783616,
-    "y": 311.82230714115121,
-    "z": 8000,
-    "height": 325.27346548841655,
+    "y": 338.72462383568188,
+    "z": 6000,
+    "height": 298.37114879388582,
     "width": 640.76427036064013,
-    "tabOrder": 8000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineChart",
@@ -98,6 +98,49 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Percent of Discharges'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Year'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Share of Discharges by Healthcare Facility Type Per Year'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

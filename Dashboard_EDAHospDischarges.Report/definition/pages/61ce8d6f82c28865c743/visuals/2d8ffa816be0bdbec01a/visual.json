@@ -4,10 +4,10 @@
   "position": {
     "x": 509.92118461905903,
     "y": 121.06042512538811,
-    "z": 2000,
+    "z": 0,
     "height": 299.59398137090994,
     "width": 470.7905421542871,
-    "tabOrder": 2000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineChart",
@@ -96,6 +96,54 @@
               "expr": {
                 "Literal": {
                   "Value": "'% of Total Discharges'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Year'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Count and Percent'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Discharges and Percent of Diagnosis Prevalence by Year'"
                 }
               }
             }

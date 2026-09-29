@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 420.65440649629807,
-    "z": 5000,
+    "z": 2000,
     "height": 299.59398137090994,
     "width": 509.92118461905903,
-    "tabOrder": 5000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -83,6 +83,49 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Year'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS (Days)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS Comparison — Trend (Public vs Private)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

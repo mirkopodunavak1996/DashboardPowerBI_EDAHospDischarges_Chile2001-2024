@@ -240,20 +240,29 @@ table Fact_Discharges
 
 	measure 'Chapter Rank Display' =
 			
-			"Rank " & [Chapter LOS Rank] & " of " & [Total Chapters] & " chapters"
+			"Rank " & [Chapter LOS Rank] & " of " & [Total Chapters]
 		lineageTag: 45aff8cc-b26e-48a5-b2c9-bfe254cfb052
 
 	measure 'Group Rank Display' =
 			
-			"Rank " & [Group LOS Rank] & " of " & [Total Groups] & " groups"
+			"Rank " & [Group LOS Rank] & " of " & [Total Groups]
 		lineageTag: 9b1e8bf1-ba77-402c-a52d-edb93b0f72a0
 
 	measure '% Unknown Discharges' =
 			
-			DIVIDE(
-			    CALCULATE(COUNTROWS('Fact_Discharges'), 'Fact_Discharges'[healthcare facility type] = "Unknown"),
-			    COUNTROWS('Fact_Discharges')
-			)
+			VAR TotalAll =
+			    CALCULATE(COUNTROWS('Fact_Discharges'), REMOVEFILTERS('Fact_Discharges'[healthcare facility type]))
+			VAR UnknownCount =
+			    COALESCE(
+			        CALCULATE(
+			            COUNTROWS('Fact_Discharges'),
+			            REMOVEFILTERS('Fact_Discharges'[healthcare facility type]),
+			            'Fact_Discharges'[healthcare facility type] = "Unknown"
+			        ),
+			        0
+			    )
+			RETURN
+			    DIVIDE(UnknownCount, TotalAll, 0)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7c739c79-b681-4f9c-b066-1d7fde382681
 

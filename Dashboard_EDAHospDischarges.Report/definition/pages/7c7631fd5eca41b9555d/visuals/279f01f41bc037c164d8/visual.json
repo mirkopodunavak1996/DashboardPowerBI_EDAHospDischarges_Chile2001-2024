@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a0c936198ab0c0540286",
+  "name": "279f01f41bc037c164d8",
   "position": {
-    "x": 322.82780033436831,
-    "y": 86.821112968712683,
-    "z": 2000,
-    "height": 133.28875089562933,
-    "width": 332.61046095056128,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 221.33269644136615,
+    "z": 11001,
+    "height": 117.39192739431574,
+    "width": 212.77286840219728,
+    "tabOrder": 11001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,16 +23,31 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Group Rank Display"
+                  "Property": "% Private Discharges"
                 }
               },
-              "queryRef": "Fact_Discharges.Group Rank Display",
-              "nativeQueryRef": "Group Rank Display"
+              "queryRef": "Fact_Discharges.% Private Discharges",
+              "nativeQueryRef": "% Private Discharges"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Fact_Discharges"
+                  }
+                },
+                "Property": "% Private Discharges"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

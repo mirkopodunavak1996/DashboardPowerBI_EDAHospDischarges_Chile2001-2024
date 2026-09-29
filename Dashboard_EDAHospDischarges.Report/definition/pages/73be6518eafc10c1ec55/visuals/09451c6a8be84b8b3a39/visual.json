@@ -3,11 +3,11 @@
   "name": "09451c6a8be84b8b3a39",
   "position": {
     "x": 350.9529496059231,
-    "y": 585.73680439455461,
-    "z": 9000,
-    "height": 134.51158347265346,
+    "y": 560.057320277048,
+    "z": 7000,
+    "height": 160.19106759016003,
     "width": 634.65010747551946,
-    "tabOrder": 9000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "Fact_Discharges.sex",
-              "nativeQueryRef": "sex",
-              "displayName": "sex"
+              "nativeQueryRef": "Sex",
+              "displayName": "Sex"
             }
           ],
           "fieldParameters": [
@@ -77,12 +77,12 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Median"
+                  "Property": "Total Discharges"
                 }
               },
-              "queryRef": "Fact_Discharges.Median",
-              "nativeQueryRef": "Median",
-              "displayName": "Median"
+              "queryRef": "Fact_Discharges.Total Discharges",
+              "nativeQueryRef": "Total Discharges",
+              "displayName": "Total Discharges"
             }
           ],
           "fieldParameters": [
@@ -113,7 +113,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Median"
+                "Property": "Total Discharges"
               }
             },
             "direction": "Descending"
@@ -121,6 +121,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Median and Total Discharges by Profile Metric and Dimension'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "ebe7eb107bd691ed850b",
   "position": {
-    "x": 0,
-    "y": 311.82230714115121,
-    "z": 4000,
-    "height": 408.42608072605685,
+    "x": 314.26797229519946,
+    "y": 338.72462383568188,
+    "z": 2000,
+    "height": 381.52376403152618,
     "width": 325.27346548841655,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pieChart",
@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "Fact_Discharges.sex",
-              "nativeQueryRef": "sex",
+              "nativeQueryRef": "Sex",
               "active": true,
-              "displayName": "sex"
+              "displayName": "Sex"
             }
           ],
           "fieldParameters": [
@@ -97,43 +97,21 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Count of Discharges by Patient Profile Dimension'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0e860fbd27ea160aa869",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "discharge condition"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4b598408b440e0083600",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "sex"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

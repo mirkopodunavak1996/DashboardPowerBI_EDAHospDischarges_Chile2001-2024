@@ -3,11 +3,11 @@
   "name": "0400c023100e9d0b5498",
   "position": {
     "x": 212.77286840219728,
-    "y": 91.712443276809168,
-    "z": 6000,
-    "height": 105.16360162407452,
-    "width": 212.77286840219728,
-    "tabOrder": 6000
+    "y": 107.60926677812276,
+    "z": 4000,
+    "height": 133.28875089562933,
+    "width": 225.00119417243852,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "% Private Discharges"
+                  "Property": "% Unknown Discharges"
                 }
               },
-              "queryRef": "Fact_Discharges.% Private Discharges",
-              "nativeQueryRef": "% Private Discharges"
+              "queryRef": "Fact_Discharges.% Unknown Discharges",
+              "nativeQueryRef": "% Unknown Discharges"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "% Private Discharges"
+                "Property": "% Unknown Discharges"
               }
             },
             "direction": "Descending"
@@ -50,6 +50,24 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "34D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

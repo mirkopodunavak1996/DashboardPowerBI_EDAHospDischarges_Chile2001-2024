@@ -4,10 +4,10 @@
   "position": {
     "x": 980.71172677334607,
     "y": 420.65440649629807,
-    "z": 6000,
+    "z": 3000,
     "height": 251.90351086696919,
     "width": 299.59398137090994,
-    "tabOrder": 6000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pieChart",
@@ -80,43 +80,21 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Count of Discharges by Health Insurance'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d27b8b26abde31596b40",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fact_Discharges"
-              }
-            },
-            "Property": "health insurance"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "22f85e305207d0196290",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Fact_Discharges"
-                  }
-                },
-                "Property": "sex"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

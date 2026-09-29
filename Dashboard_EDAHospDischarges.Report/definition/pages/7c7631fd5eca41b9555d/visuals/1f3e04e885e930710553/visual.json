@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "1f3e04e885e930710553",
   "position": {
-    "x": 425.54573680439455,
-    "y": 108.83209935514688,
-    "z": 9000,
-    "height": 202.99020778600431,
-    "width": 555.16598996895152,
-    "tabOrder": 9000
+    "x": 491.57869596369716,
+    "y": 92.935275853833289,
+    "z": 7000,
+    "height": 215.21853355624552,
+    "width": 486.68736565560067,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -78,6 +78,36 @@
           }
         ]
       }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Hospital Name'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Discharges Count: Top 5 Hospitals (Until 2020)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },

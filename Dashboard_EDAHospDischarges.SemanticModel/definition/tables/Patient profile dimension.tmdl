@@ -40,8 +40,8 @@ table 'Patient profile dimension'
 		mode: import
 		source =
 				{
-				    ("sex", NAMEOF('Fact_Discharges'[sex]), 0),
-				    ("health insurance", NAMEOF('Fact_Discharges'[health insurance]), 1)
+				    ("Sex", NAMEOF('Fact_Discharges'[sex]), 0),
+				    ("Health Insurance", NAMEOF('Fact_Discharges'[health insurance]), 1)
 				}
 
 	annotation PBI_Id = 7fc1855535664d5a92276ba47d412708

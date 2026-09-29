@@ -3,11 +3,11 @@
   "name": "559ec544e959b08e0881",
   "position": {
     "x": 977.04322904227377,
-    "y": 210.32720324814903,
-    "z": 10002,
+    "y": 227.44685932648676,
+    "z": 9000,
     "height": 80.706950083592076,
     "width": 302.03964652495819,
-    "tabOrder": 10002
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -268,76 +268,58 @@
                 "Where": [
                   {
                     "Condition": {
-                      "And": {
-                        "Left": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "chapter names"
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
                                 }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'ciertas afecciones originadas en el período perinatal'"
-                                  }
+                              },
+                              "Property": "chapter names"
+                            }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
                                 }
-                              ]
-                            ]
-                          }
-                        },
-                        "Right": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "chapter names"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "group names"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'ciertas afecciones originadas en el período perinatal'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'trastornos del sistema digestivo del feto y del recién nacido'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
+                              },
+                              "Property": "group names"
+                            }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "primary diagnosis name"
                             }
                           }
-                        }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'defectos de la coagulación, púrpura y otras afecciones hemorrágicas'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'coagulacion intravascular diseminada (sindrome de desfibrinacion)'"
+                              }
+                            }
+                          ]
+                        ]
                       }
                     },
                     "Annotations": {
@@ -372,6 +354,21 @@
                               },
                               "Level": "group names"
                             }
+                          },
+                          {
+                            "HierarchyLevel": {
+                              "Expression": {
+                                "Hierarchy": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Hierarchy": "Diagnosis Hierarchy"
+                                }
+                              },
+                              "Level": "primary diagnosis name"
+                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -381,18 +378,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'ciertas afecciones originadas en el período perinatal'"
+                                      "Value": "'enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad'"
                                     }
                                   }
                                 ]
@@ -401,7 +387,16 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "'trastornos del sistema digestivo del feto y del recién nacido'"
+                                      "Value": "'defectos de la coagulación, púrpura y otras afecciones hemorrágicas'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "2": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'coagulacion intravascular diseminada (sindrome de desfibrinacion)'"
                                     }
                                   }
                                 ]
@@ -432,16 +427,26 @@
                                   "Property": "group names"
                                 }
                               }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Diagnosis"
+                                    }
+                                  },
+                                  "Property": "primary diagnosis name"
+                                }
+                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "ciertas afecciones originadas en el período perinatal"
-                          },
-                          {
-                            "0": "ciertas afecciones originadas en el período perinatal",
-                            "1": "trastornos del sistema digestivo del feto y del recién nacido"
+                            "0": "enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad",
+                            "1": "defectos de la coagulación, púrpura y otras afecciones hemorrágicas",
+                            "2": "coagulacion intravascular diseminada (sindrome de desfibrinacion)"
                           }
                         ]
                       }

@@ -4,10 +4,10 @@
   "position": {
     "x": 985.60305708144256,
     "y": 0,
-    "z": 14002,
+    "z": 14000,
     "height": 86.821112968712683,
     "width": 294.70265106281346,
-    "tabOrder": 14002
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "slicer",
@@ -41,14 +41,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "2004D"
-                }
-              }
-            },
-            "numericEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "2010D"
+                  "Value": "2003D"
                 }
               }
             },
@@ -56,6 +49,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Between'"
+                }
+              }
+            },
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "2023D"
                 }
               }
             }
@@ -94,7 +94,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "2004D"
+                                "Value": "2003D"
                               }
                             }
                           }
@@ -114,7 +114,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "2010D"
+                                "Value": "2023D"
                               }
                             }
                           }

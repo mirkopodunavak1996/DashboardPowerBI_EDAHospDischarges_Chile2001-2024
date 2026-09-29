@@ -4,10 +4,10 @@
   "position": {
     "x": 351.25,
     "y": 230,
-    "z": 14000,
+    "z": 12000,
     "height": 258.75,
     "width": 331.25,
-    "tabOrder": 14000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -69,6 +69,49 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'LOS Days'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Group Names'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total LOS Days (Top 5 Group Names)'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },

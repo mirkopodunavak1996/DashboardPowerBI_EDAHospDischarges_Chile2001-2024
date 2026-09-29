@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 6005,
+    "z": 8000,
     "height": 112.50059708621926,
     "width": 926.90709338428474,
-    "tabOrder": 6005
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Government View",
+                    "value": "Ministry of Health View",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "28pt",
@@ -31,7 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "My facility's discharges, length of stay and patient profile",
+                    "value": "Disease Burden and System Outcomes",
                     "textStyle": {
                       "fontSize": "18pt",
                       "color": "#999999"
