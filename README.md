@@ -43,8 +43,5 @@ An advocacy-oriented view: how many patients are affected and how that's changed
 
 ## Tools
 
-<<<<<<< HEAD
 Power BI Desktop, DAX, Power Query (M), Power BI Service (Publish to Web)
-=======
-Power BI Desktop, DAX, Power Query (M), Power BI Service (Publish to Web)
->>>>>>> 4d810c55804829ddc83d94971e91bda093ddb283
+
