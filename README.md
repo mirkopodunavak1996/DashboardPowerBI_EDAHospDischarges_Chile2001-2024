@@ -23,6 +23,23 @@ A system-level view: disease burden over time (volume and relative share), lengt
 ### Patient Associations
 An advocacy-oriented view: how many patients are affected and how that's changed over time, an interactive patient profile (age, sex/insurance, and count/mortality/LOS, all toggleable), which hospitals treat the condition most, and how the disease's total system burden (bed-days) ranks nationally against all other diagnoses.
 
+## Screenshots of each page
+
+### Home
+![Home page](ProjectViewScreenshots/Home.png)
+
+### Hospitals
+![Hospitals page](ProjectViewScreenshots/Hospitals.png)
+
+### Pharma
+![Pharma page](ProjectViewScreenshots/Pharma.png)
+
+### Government
+![Government page](ProjectViewScreenshots/Government.png)
+
+### Patient Associations
+![Patient Associations page](ProjectViewScreenshots/Patients.png)
+
 ---
 
 ## Data
