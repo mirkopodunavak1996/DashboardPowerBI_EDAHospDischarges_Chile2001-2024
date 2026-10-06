@@ -1,3 +1,4 @@
+
 # Hospital Discharges in Chile (2001-2024) Dashboard
 
 An interactive Power BI dashboard built on 25.7 million hospital discharge records (2001–2024), designed for four different audiences: hospitals, pharmaceutical companies, government health authorities, and patient associations.
@@ -42,4 +43,8 @@ An advocacy-oriented view: how many patients are affected and how that's changed
 
 ## Tools
 
+<<<<<<< HEAD
 Power BI Desktop, DAX, Power Query (M), Power BI Service (Publish to Web)
+=======
+Power BI Desktop, DAX, Power Query (M), Power BI Service (Publish to Web)
+>>>>>>> 4d810c55804829ddc83d94971e91bda093ddb283
