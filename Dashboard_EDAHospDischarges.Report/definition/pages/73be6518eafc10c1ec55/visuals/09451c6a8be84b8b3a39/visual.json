@@ -3,9 +3,9 @@
   "name": "09451c6a8be84b8b3a39",
   "position": {
     "x": 350.9529496059231,
-    "y": 560.057320277048,
+    "y": 542.93766419871031,
     "z": 7000,
-    "height": 160.19106759016003,
+    "height": 152.8540721280153,
     "width": 634.65010747551946,
     "tabOrder": 7000
   },
@@ -42,12 +42,12 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "sex"
+                  "Property": "health insurance"
                 }
               },
-              "queryRef": "Fact_Discharges.sex",
-              "nativeQueryRef": "Sex",
-              "displayName": "Sex"
+              "queryRef": "Fact_Discharges.health insurance",
+              "nativeQueryRef": "Health Insurance",
+              "displayName": "Health Insurance"
             }
           ],
           "fieldParameters": [
@@ -77,12 +77,12 @@
                       "Entity": "Fact_Discharges"
                     }
                   },
-                  "Property": "Total Discharges"
+                  "Property": "Median"
                 }
               },
-              "queryRef": "Fact_Discharges.Total Discharges",
-              "nativeQueryRef": "Total Discharges",
-              "displayName": "Total Discharges"
+              "queryRef": "Fact_Discharges.Median",
+              "nativeQueryRef": "Median",
+              "displayName": "Median"
             }
           ],
           "fieldParameters": [
@@ -113,7 +113,7 @@
                     "Entity": "Fact_Discharges"
                   }
                 },
-                "Property": "Total Discharges"
+                "Property": "Median"
               }
             },
             "direction": "Descending"

@@ -3,9 +3,9 @@
   "name": "e90cf1b22ee9a016646e",
   "position": {
     "x": 639.541437783616,
-    "y": 637.0957726295677,
+    "y": 627.31311201337473,
     "z": 8000,
-    "height": 83.152615237640319,
+    "height": 68.478624313350849,
     "width": 640.76427036064013,
     "tabOrder": 8000
   },
@@ -19,14 +19,20 @@
               {
                 "textRuns": [
                   {
-                    "value": "Note 1: Hospital-name data is only available until 2020 and Hospital-type is unavailable only for year 2023. Related charts reflects discharges from that period only."
+                    "value": "Note 1: Hospital-name data is only available until 2020 and Hospital-type is unavailable only for year 2023. Related charts reflects discharges from that period only.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
                   }
                 ]
               },
               {
                 "textRuns": [
                   {
-                    "value": "Note 2: Hospital-type data (public/private) is unavailable for 2023 and is recorded as 'Unknown' for that year only"
+                    "value": "Note 2: Hospital-type data (public/private) is unavailable for 2023 and is recorded as 'Unknown' for that year only",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
                   }
                 ]
               }

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "11702f6b79ea69973075",
+  "position": {
+    "x": 140.62574635777406,
+    "y": 138.18008120372582,
+    "z": 2000,
+    "height": 421.87723907332219,
+    "width": 1000.277048005732,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Hospital Discharges Dashboard",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "54pt",
+                      "color": "#1f5a7a"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\"An interactive exploration of 25.7 million hospital discharges (2001–2024), built for four audiences: hospitals, patient associations pharmaceutical companies and government health authorities. Use the navigation bar to explore each view.\"",
+                    "textStyle": {
+                      "fontSize": "24pt",
+                      "color": "#808080"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

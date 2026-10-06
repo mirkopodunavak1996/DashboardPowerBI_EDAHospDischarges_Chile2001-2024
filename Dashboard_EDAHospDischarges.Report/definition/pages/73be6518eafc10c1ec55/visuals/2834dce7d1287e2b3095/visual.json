@@ -3,7 +3,7 @@
   "name": "2834dce7d1287e2b3095",
   "position": {
     "x": 682.34057797946025,
-    "y": 489.13303080964891,
+    "y": 472.01337473131122,
     "z": 8000,
     "height": 70.924289467399092,
     "width": 303.26247910198231,
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''Fact_Discharges''[sex]'"
+                                "Value": "'''Fact_Discharges''[health insurance]'"
                               }
                             }
                           ]
@@ -109,7 +109,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''Fact_Discharges''[sex]'"
+                                      "Value": "'''Fact_Discharges''[health insurance]'"
                                     }
                                   }
                                 ]
@@ -133,7 +133,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Sex"
+                            "0": "Health Insurance"
                           }
                         ]
                       }

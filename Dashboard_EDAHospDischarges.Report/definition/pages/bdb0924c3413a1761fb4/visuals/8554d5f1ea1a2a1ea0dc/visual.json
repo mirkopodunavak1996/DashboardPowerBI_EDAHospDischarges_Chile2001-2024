@@ -51,6 +51,24 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {

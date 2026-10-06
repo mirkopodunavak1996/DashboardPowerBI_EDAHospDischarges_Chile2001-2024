@@ -92,6 +92,19 @@
             }
           }
         }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Count of Discharges'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {

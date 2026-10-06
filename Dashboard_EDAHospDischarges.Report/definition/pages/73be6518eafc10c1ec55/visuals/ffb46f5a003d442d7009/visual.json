@@ -3,7 +3,7 @@
   "name": "ffb46f5a003d442d7009",
   "position": {
     "x": 350.9529496059231,
-    "y": 489.13303080964891,
+    "y": 472.01337473131122,
     "z": 6000,
     "height": 70.924289467399092,
     "width": 331.38762837353715,
@@ -75,7 +75,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''Fact_Discharges''[Total Discharges]'"
+                                "Value": "'''Fact_Discharges''[Median]'"
                               }
                             }
                           ]
@@ -103,7 +103,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''Fact_Discharges''[Total Discharges]'"
+                                      "Value": "'''Fact_Discharges''[Median]'"
                                     }
                                   }
                                 ]
@@ -127,7 +127,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Total Discharges"
+                            "0": "Median"
                           }
                         ]
                       }
